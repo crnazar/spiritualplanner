@@ -1,0 +1,2 @@
+# spiritualplanner
+spiritual-planner 
