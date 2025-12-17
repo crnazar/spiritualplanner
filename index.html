@@ -12,34 +12,39 @@
       min-height: 100vh; 
       color: #1f2937;
       background-color: #FDF8F5;
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 Q45 30 30 55 Q15 30 30 5' fill='none' stroke='%23F4C430' stroke-width='0.5' opacity='0.15'/%3E%3Cpath d='M5 30 Q30 15 55 30 Q30 45 5 30' fill='none' stroke='%239DD3C9' stroke-width='0.5' opacity='0.15'/%3E%3C/svg%3E");
-      background-size: 30px 30px;
     }
     
     .container { max-width: 900px; margin: 0 auto; padding: 20px; }
     
     h1 { font-size: 1.8rem; font-weight: 700; text-align: center; margin-bottom: 4px; color: #E85D4C; }
-    .subtitle { color: #6B8EAE; text-align: center; margin-bottom: 24px; font-size: 14px; font-style: italic; }
+    .subtitle { color: #6B8EAE; text-align: center; margin-bottom: 8px; font-size: 14px; font-style: italic; }
+    
+    .today-header { background: linear-gradient(135deg, #FFF8E7 0%, #FEFAF5 100%); border-radius: 12px; padding: 16px; margin-bottom: 20px; text-align: center; border: 1px solid #F4C430; }
+    .today-date { font-size: 18px; color: #E85D4C; font-weight: 600; }
+    .today-feast { font-size: 14px; color: #5A5A5A; margin-top: 6px; font-style: italic; }
+    
+    .holy-images { display: flex; justify-content: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+    .holy-icon { text-align: center; background: linear-gradient(135deg, #FFF8E7 0%, #FEFAF5 100%); border-radius: 50%; width: 70px; height: 70px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 3px solid #F4C430; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .icon-emoji { font-size: 28px; line-height: 1; }
+    .holy-label { font-size: 8px; color: #6b7280; margin-top: 2px; }
     
     .status-msg { text-align: center; padding: 10px; margin-bottom: 16px; border-radius: 8px; font-size: 14px; }
     .status-msg.success { background: #D4EDDA; color: #155724; }
     .status-msg.error { background: #F8D7DA; color: #721C24; }
-    .status-msg.info { background: #FFF3CD; color: #856404; }
     
-    .daily-prayer { background: linear-gradient(135deg, #FFF8E7 0%, #FEFAF5 100%); border-radius: 16px; padding: 20px; margin-bottom: 24px; border: 1px solid #F4C430; text-align: center; }
-    .daily-prayer h2 { font-size: 16px; color: #E85D4C; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; }
-    .daily-prayer p { font-size: 14px; line-height: 1.8; color: #5A5A5A; font-style: italic; }
-    .prayer-toggle { background: none; border: none; color: #6B8EAE; cursor: pointer; font-size: 12px; margin-top: 8px; }
+    .music-player { background: linear-gradient(135deg, #2D2D2D 0%, #1a1a1a 100%); border-radius: 12px; padding: 12px 16px; margin-bottom: 20px; }
+    .music-player-title { color: #F4C430; font-size: 13px; font-weight: 600; }
+    .music-select { background: #3D3D3D; border: none; color: white; padding: 8px; border-radius: 6px; font-size: 12px; width: 100%; margin: 8px 0; }
     
     .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-bottom: 24px; }
     .stat { background: white; border-radius: 12px; padding: 16px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; }
     .stat-num { font-size: 24px; font-weight: 700; }
-    .stat-label { font-size: 10px; color: #6b7280; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-label { font-size: 10px; color: #6b7280; margin-top: 4px; text-transform: uppercase; }
     .progress-bar { height: 4px; background: #e5e7eb; border-radius: 2px; margin-top: 6px; overflow: hidden; }
     .progress-fill { height: 100%; background: linear-gradient(90deg, #9DD3C9, #6B8EAE); border-radius: 2px; }
     
     .tabs { display: flex; gap: 4px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center; }
-    .tab { padding: 10px 14px; border: none; border-radius: 8px 8px 0 0; cursor: pointer; font-size: 13px; background: #f0f0f0; color: #5A5A5A; transition: all 0.2s; }
+    .tab { padding: 10px 12px; border: none; border-radius: 8px 8px 0 0; cursor: pointer; font-size: 12px; background: #f0f0f0; color: #5A5A5A; transition: all 0.2s; }
     .tab:hover { background: #e0e0e0; }
     .tab.active { background: #9DD3C9; color: #1f2937; }
     
@@ -49,8 +54,8 @@
     .btn-secondary { background: #6B8EAE; color: white; }
     .btn-secondary:hover { background: #5A7D9D; }
     .btn-small { padding: 6px 12px; font-size: 12px; }
-    .btn-danger { background: #F8D7DA; color: #721C24; }
-    .btn-danger:hover { background: #F1C1C6; }
+    .btn-danger { background: #dc3545; color: white; }
+    .btn-danger:hover { background: #c82333; }
     
     .card { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid; overflow: hidden; margin-bottom: 12px; }
     .card-header { padding: 16px; cursor: pointer; display: flex; align-items: center; gap: 12px; }
@@ -68,11 +73,10 @@
     .lectio-textarea { width: 100%; min-height: 80px; padding: 10px; border-radius: 8px; border: 1px solid #e0e0e0; font-size: 14px; font-family: 'Georgia', serif; resize: vertical; line-height: 1.6; }
     .lectio-textarea:focus { outline: none; border-color: #9DD3C9; }
     
-    .scripture-display { background: linear-gradient(135deg, #FFF8E7 0%, #FEFAF5 100%); border-radius: 12px; padding: 20px; margin-bottom: 16px; border: 1px solid #F4C430; }
-    .scripture-reference { font-size: 16px; color: #E85D4C; font-weight: 600; margin-bottom: 12px; text-align: center; }
-    .scripture-text { font-size: 15px; line-height: 2; color: #1f2937; text-align: justify; }
-    .scripture-text .verse-num { font-size: 10px; color: #E85D4C; vertical-align: super; margin-right: 3px; font-weight: 700; }
-    .scripture-note { font-size: 12px; color: #6b7280; text-align: center; margin-top: 12px; font-style: italic; }
+    .scripture-display { background: linear-gradient(135deg, #FFF8E7 0%, #FEFAF5 100%); border-radius: 12px; padding: 20px; margin-bottom: 16px; border: 1px solid #F4C430; text-align: center; }
+    .scripture-reference { font-size: 18px; color: #E85D4C; font-weight: 600; margin-bottom: 12px; }
+    .scripture-link { display: inline-block; background: #E85D4C; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 14px; margin: 5px; }
+    .scripture-link:hover { background: #D64D3C; }
     
     .reading-options { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
     .reading-option { padding: 8px 16px; border: 2px solid #e0e0e0; border-radius: 8px; cursor: pointer; font-size: 13px; background: white; transition: all 0.2s; }
@@ -85,29 +89,19 @@
     .prayer-content { font-size: 14px; line-height: 1.9; color: #1f2937; }
     .prayer-content p { margin-bottom: 12px; }
     .prayer-content .response { color: #2A9D8F; font-weight: 500; }
-    .prayer-content .instruction { color: #6b7280; font-style: italic; font-size: 13px; }
     .prayer-content h4 { color: #E85D4C; font-size: 14px; margin: 16px 0 8px 0; }
-    .prayer-content .mystery { background: #FFF8E7; padding: 10px; border-radius: 8px; margin-bottom: 8px; border-left: 3px solid #F4C430; }
+    .prayer-content .mystery { background: #FFF8E7; padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 3px solid #F4C430; }
     .prayer-content .mystery-title { font-weight: 600; color: #E85D4C; }
-    .prayer-content .mystery-fruit { font-size: 12px; color: #6b7280; font-style: italic; }
+    .prayer-content .mystery-meditation { font-size: 13px; color: #5A5A5A; margin-top: 6px; font-style: italic; }
+    .prayer-content .mystery-fruit { font-size: 12px; color: #6b7280; margin-top: 4px; }
     
-    .intention-category { padding: 12px; background: #FEFAF5; border-radius: 8px; margin-bottom: 10px; }
-    .intention-category-title { font-size: 12px; font-weight: 600; color: #E85D4C; margin-bottom: 6px; }
-    .intention-list { list-style: none; }
-    .intention-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px dashed #F4C430; }
+    .intention-item { display: flex; align-items: flex-start; gap: 8px; padding: 8px 0; border-bottom: 1px dashed #e0e0e0; }
     .intention-item:last-child { border-bottom: none; }
-    .intention-check { width: 16px; height: 16px; border-radius: 50%; border: 2px solid #9DD3C9; background: white; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .intention-check { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #9DD3C9; background: white; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .intention-check.done { background: #9DD3C9; color: white; font-size: 10px; }
-    .intention-text { flex: 1; font-size: 13px; }
     
-    .goal-category { padding: 14px; background: #FEFAF5; border-radius: 8px; margin-bottom: 12px; }
-    .goal-category.spiritual { border-left: 4px solid #C8A8D3; }
-    .goal-category.family { border-left: 4px solid #E8B4B8; }
-    .goal-category.personal { border-left: 4px solid #9DD3C9; }
-    .goal-category-title { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
-    .goal-category.spiritual .goal-category-title { color: #9B59B6; }
-    .goal-category.family .goal-category-title { color: #E85D4C; }
-    .goal-category.personal .goal-category-title { color: #2A9D8F; }
+    .goal-category { padding: 14px; background: #FEFAF5; border-radius: 8px; margin-bottom: 12px; border-left: 4px solid #9DD3C9; }
+    .goal-category-title { font-size: 13px; font-weight: 600; margin-bottom: 8px; color: #2A9D8F; }
     .goal-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
     .goal-item:last-child { border-bottom: none; }
     .goal-check { width: 18px; height: 18px; border-radius: 4px; border: 2px solid #9DD3C9; background: white; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -115,22 +109,15 @@
     .goal-text { flex: 1; font-size: 13px; }
     .goal-text.done { text-decoration: line-through; color: #9ca3af; }
     
-    .feast-days { background: white; border-radius: 8px; padding: 12px; margin-bottom: 12px; border: 1px solid #f0f0f0; }
-    .feast-day { padding: 6px 0; border-bottom: 1px dashed #f0f0f0; font-size: 13px; }
-    .feast-day:last-child { border-bottom: none; }
-    .feast-date { color: #E85D4C; font-weight: 600; }
-    .feast-solemnity { background: #F4C430; padding: 2px 6px; border-radius: 4px; font-size: 10px; color: #5A5A5A; margin-left: 6px; }
-    
     .scripture-box { background: linear-gradient(135deg, #FFF8E7 0%, #FEFAF5 100%); border-radius: 8px; padding: 14px; margin-bottom: 12px; text-align: center; border: 1px solid #F4C430; }
     .scripture-quote { font-size: 15px; font-style: italic; color: #5A5A5A; line-height: 1.6; }
     .scripture-ref { font-size: 12px; color: #E85D4C; margin-top: 6px; }
     
     .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-top: 12px; }
     .calendar-header { text-align: center; font-size: 11px; font-weight: 600; color: #6b7280; padding: 6px; }
-    .calendar-day { text-align: center; padding: 8px 4px; border-radius: 6px; font-size: 13px; cursor: pointer; background: white; border: 1px solid #f0f0f0; }
+    .calendar-day { text-align: center; padding: 8px 4px; border-radius: 6px; font-size: 12px; cursor: pointer; background: white; border: 1px solid #f0f0f0; }
     .calendar-day:hover { background: #FFF8E7; }
     .calendar-day.today { background: #E85D4C; color: white; border-color: #E85D4C; }
-    .calendar-day.has-entry { background: #E8F6F3; border-color: #9DD3C9; }
     .calendar-day.feast { background: #FFF3CD; border-color: #F4C430; }
     .calendar-day.empty { background: transparent; border-color: transparent; cursor: default; }
     
@@ -148,52 +135,129 @@
     
     .export-row { display: flex; gap: 8px; justify-content: center; margin-top: 24px; flex-wrap: wrap; }
     
-    .today-lectios { background: #E8F6F3; border-radius: 8px; padding: 12px; margin-bottom: 16px; border: 1px solid #9DD3C9; }
-    .today-lectios-title { font-size: 13px; font-weight: 600; color: #2A9D8F; margin-bottom: 8px; }
-    .today-lectio-item { font-size: 12px; color: #1f2937; padding: 4px 0; }
-    
-    .prayer-nav { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; justify-content: center; }
-    .prayer-nav-btn { padding: 6px 12px; border: 2px solid #F4C430; border-radius: 20px; background: white; cursor: pointer; font-size: 11px; color: #5A5A5A; transition: all 0.2s; }
+    .prayer-nav { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 16px; justify-content: center; }
+    .prayer-nav-btn { padding: 5px 10px; border: 2px solid #F4C430; border-radius: 16px; background: white; cursor: pointer; font-size: 10px; color: #5A5A5A; transition: all 0.2s; }
     .prayer-nav-btn:hover { background: #FFF8E7; }
-    .prayer-nav-btn.active { background: #F4C430; color: #1f2937; border-color: #F4C430; }
+    .prayer-nav-btn.active { background: #F4C430; color: #1f2937; }
     
-    .month-goals { background: white; border-radius: 12px; padding: 16px; margin-bottom: 16px; border: 1px solid #f0f0f0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-    .month-goals h3 { font-size: 15px; color: #E85D4C; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
-    .add-goal-row { display: flex; gap: 8px; margin-bottom: 8px; }
+    .month-goals { background: white; border-radius: 12px; padding: 16px; margin-bottom: 16px; border: 1px solid #f0f0f0; }
+    .month-goals h3 { font-size: 15px; color: #E85D4C; margin-bottom: 16px; }
+    .add-goal-row { display: flex; gap: 8px; margin-bottom: 12px; }
     .add-goal-input { flex: 1; padding: 8px 12px; border: 1px solid #e0e0e0; border-radius: 8px; font-size: 13px; }
-    .add-goal-input:focus { outline: none; border-color: #9DD3C9; }
-    .add-goal-select { padding: 8px; border: 1px solid #e0e0e0; border-radius: 8px; font-size: 13px; }
+    .add-goal-select { padding: 8px; border: 1px solid #e0e0e0; border-radius: 8px; font-size: 12px; }
+    
+    .litany-section { margin-bottom: 16px; }
+    .litany-section h4 { color: #E85D4C; font-size: 13px; margin-bottom: 8px; border-bottom: 1px solid #F4C430; padding-bottom: 4px; }
+    .litany-line { display: flex; justify-content: space-between; padding: 4px 0; font-size: 13px; }
+    .litany-call { color: #1f2937; }
+    .litany-response { color: #2A9D8F; font-weight: 500; font-style: italic; }
+    
+    .bible-progress { background: white; border-radius: 12px; padding: 16px; margin-bottom: 16px; border: 1px solid #f0f0f0; }
+    .bible-progress h3 { font-size: 15px; color: #E85D4C; margin-bottom: 12px; }
+    .book-progress-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 6px; }
+    .book-progress-item { background: #FEFAF5; border-radius: 6px; padding: 6px; font-size: 10px; }
+    .book-progress-name { font-weight: 600; color: #5A5A5A; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .book-progress-bar { height: 4px; background: #e5e7eb; border-radius: 2px; margin-top: 4px; overflow: hidden; }
+    .book-progress-fill { height: 100%; background: linear-gradient(90deg, #9DD3C9, #6B8EAE); border-radius: 2px; }
+    
+    .rosary-container { background: linear-gradient(135deg, #2D2D2D 0%, #1a1a1a 100%); border-radius: 16px; padding: 20px; margin-bottom: 16px; }
+    .rosary-title { color: #F4C430; text-align: center; font-size: 16px; margin-bottom: 16px; }
+    .rosary-beads { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .rosary-bead { width: 24px; height: 24px; border-radius: 50%; border: 2px solid #6B8EAE; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #6B8EAE; font-size: 9px; transition: all 0.2s; }
+    .rosary-bead.done { background: #9DD3C9; border-color: #9DD3C9; color: white; }
+    .rosary-bead.large { width: 30px; height: 30px; border-color: #F4C430; color: #F4C430; }
+    .rosary-bead.large.done { background: #F4C430; color: #1a1a1a; }
+    
+    .daily-prayers-tracker { background: white; border-radius: 12px; padding: 16px; margin-bottom: 16px; border: 1px solid #f0f0f0; }
+    .daily-prayers-title { font-size: 16px; color: #E85D4C; margin-bottom: 4px; font-weight: 600; }
+    .daily-prayers-date { font-size: 14px; color: #5A5A5A; margin-bottom: 12px; }
+    .daily-prayer-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+    .daily-prayer-item:last-child { border-bottom: none; }
+    .daily-prayer-check { width: 24px; height: 24px; border-radius: 50%; border: 2px solid #e0e0e0; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+    .daily-prayer-check.done { border-color: #9DD3C9; background: #9DD3C9; color: white; }
+    .daily-prayer-label { flex: 1; font-size: 13px; }
+    
+    .journal-entry { background: #FEFAF5; border-radius: 12px; padding: 16px; margin-bottom: 12px; border: 1px solid #F4C430; }
+    .journal-date { font-size: 14px; color: #E85D4C; font-weight: 600; margin-bottom: 12px; }
+    .journal-section { margin-bottom: 12px; }
+    .journal-section-title { font-size: 12px; color: #6b7280; margin-bottom: 4px; }
+    
+    .prayer-history-item { background: #FEFAF5; border-radius: 8px; padding: 12px; margin-bottom: 8px; }
+    .prayer-history-date { font-size: 14px; color: #E85D4C; font-weight: 600; }
+    .prayer-history-prayers { font-size: 12px; color: #5A5A5A; margin-top: 6px; }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>✝️ Mi Planificador Espiritual</h1>
-    <p class="subtitle">Compañera Diaria de la Mujer Católica • 2026</p>
+    <p class="subtitle"> 2026</p>
+    
+    <!-- TODAY'S DATE AND FEAST -->
+    <div class="today-header">
+      <div class="today-date" id="todayDate"></div>
+      <div class="today-feast" id="todayFeast"></div>
+    </div>
+    
+    <!-- HOLY IMAGES - Using emoji symbols that always work -->
+    <div class="holy-images">
+      <div class="holy-icon" title="Nuestra Señora de Guadalupe">
+        <span class="icon-emoji">🙏</span>
+        <span class="holy-label">María</span>
+      </div>
+      <div class="holy-icon" title="La Sagrada Familia">
+        <span class="icon-emoji">👨‍👩‍👦</span>
+        <span class="holy-label">Sagrada Familia</span>
+      </div>
+      <div class="holy-icon" title="Jesús de la Divina Misericordia">
+        <span class="icon-emoji">✝️</span>
+        <span class="holy-label">Jesús</span>
+      </div>
+      <div class="holy-icon" title="Santísimo Sacramento">
+        <span class="icon-emoji">🕊️</span>
+        <span class="holy-label">Espíritu Santo</span>
+      </div>
+      <div class="holy-icon" title="Corazón de Jesús">
+        <span class="icon-emoji">❤️‍🔥</span>
+        <span class="holy-label">Sagrado Corazón</span>
+      </div>
+    </div>
+    
+    <!-- MUSIC PLAYER -->
+    <div class="music-player">
+      <span class="music-player-title">🎵 Canto Gregoriano</span>
+      <select class="music-select" id="chantSelect" onchange="changeChant()">
+        <option value="trackistador/sets/gregorian-chants-free-to-use">Cantos Gregorianos (Varios)</option>
+        <option value="themonksofglenstalabbey/sets/gregorian-chants-8">Monjes de Glenstal Abbey</option>
+        <option value="logical-drift/sets/the-monks-of-notre-dame">Monjes de Notre Dame</option>
+        <option value="thebenedictinemonksofstjames/sets/gregorian-chants-1">Monjes Benedictinos de St James</option>
+        <option value="narmprlmotare/sets/gregorian-chant">Canto Gregoriano (Candelario)</option>
+      </select>
+      <iframe id="scPlayer" width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/trackistador/sets/gregorian-chants-free-to-use&color=%23e85d4c&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+    </div>
     
     <div id="statusMsg" class="status-msg" style="display:none;"></div>
-    
-    <div class="daily-prayer">
-      <h2>🙏 Oración Diaria a Nuestra Señora</h2>
-      <div id="prayerText">
-        <p>Madre Santísima, Señora de mi corazón,<br>
-        hoy me pongo bajo Tu manto de amor y protección.<br>
-        Te entrego mi día, con todo lo que trae:<br>
-        mis alegrías, mis desafíos, mis miedos y mis esperanzas.</p>
-      </div>
-      <button class="prayer-toggle" onclick="togglePrayer()">Ver oración completa ▼</button>
-    </div>
     
     <div class="dashboard" id="dashboard"></div>
     <div class="tabs" id="tabs"></div>
     <div id="content"></div>
     
     <div class="export-row">
-      <button class="btn btn-secondary" onclick="exportData()">💾 Exportar</button>
-      <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">📂 Importar</button>
+      <button class="btn btn-secondary btn-small" onclick="exportData()">💾 Exportar</button>
+      <button class="btn btn-secondary btn-small" onclick="document.getElementById('importFile').click()">📂 Importar</button>
       <input type="file" id="importFile" accept=".json" onchange="importData(event)" style="display:none;">
+    </div>
+    
+    <div style="margin-top:20px;padding:16px;background:#FFF8E7;border-radius:12px;border:1px solid #F4C430;">
+      <h3 style="font-size:14px;color:#E85D4C;margin-bottom:8px;">💡 ¿Cómo guardar tu progreso?</h3>
+      <p style="font-size:12px;color:#5A5A5A;line-height:1.6;">Tu progreso se guarda automáticamente en este navegador. Para no perderlo:<br>
+      1. <strong>Exporta regularmente</strong> usando el botón "Exportar" (guarda un archivo .json)<br>
+      2. <strong>Usa siempre el mismo navegador</strong> en este dispositivo<br>
+      3. <strong>Importa tu archivo</strong> si cambias de dispositivo o navegador<br>
+      4. <strong>No borres los datos del navegador</strong> (cookies/caché)</p>
     </div>
   </div>
   
+  <!-- MODALS -->
   <div class="modal" id="lectioModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('lectioModal')">×</button>
@@ -247,274 +311,275 @@
       <button class="btn btn-primary" style="width:100%;" onclick="saveIntention()">Agregar Intención</button>
     </div>
   </div>
+  
+  <div class="modal" id="journalModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('journalModal')">×</button>
+      <h3 class="modal-title">📝 Diario Espiritual</h3>
+      <div class="form-group">
+        <label class="form-label">¿Cómo me siento hoy?</label>
+        <textarea class="lectio-textarea" id="journalFeeling" placeholder="Describe cómo te sientes..." rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">¿Qué aprendí hoy?</label>
+        <textarea class="lectio-textarea" id="journalLearned" placeholder="¿Qué aprendiste de Dios o de ti misma?" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">¿Qué quiero llevar conmigo en mi fe?</label>
+        <textarea class="lectio-textarea" id="journalTakeaway" placeholder="Reflexión para tu camino..." rows="3"></textarea>
+      </div>
+      <button class="btn btn-primary" style="width:100%;" onclick="saveJournalEntry()">Guardar Entrada</button>
+    </div>
+  </div>
 
   <script>
     var chevronSVG = '<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>';
 
-    var fullPrayer = "Madre Santísima, Señora de mi corazón,\nhoy me pongo bajo Tu manto de amor y protección.\nTe entrego mi día, con todo lo que trae:\nmis alegrías, mis desafíos, mis miedos y mis esperanzas.\n\nIntercede por mí ante Tu Hijo Jesús,\npara que viva este día con fe, paciencia y sabiduría.\nCuando me sienta débil, sosténme con Tu ejemplo de valentía.\nCuando no sepa qué hacer, enséñame a escuchar al Espíritu Santo.\nCuando me pierda entre las preocupaciones, recuérdame\nque Dios tiene un plan de amor para mí.\n\nMadre, cúbreme con Tu manto y protege mi hogar,\nmi esposo, mis hijos y todas mis intenciones.\nQue en cada gesto refleje Tu ternura\ny que mi corazón sea un reflejo del Tuyo:\npuro, confiado y lleno de amor por Dios.\n\nMaría, pasa al frente de todo lo que hoy me preocupa\ny condúceme por el camino de la voluntad divina.\nBajo Tu mirada, quiero vivir este día en paz y fidelidad.\n\nAmén.";
-    
-    var prayerExpanded = false;
+    // SOUNDCLOUD
+    function changeChant() {
+      var path = document.getElementById('chantSelect').value;
+      document.getElementById('scPlayer').src = 'https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/' + path + '&color=%23e85d4c&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false';
+    }
 
-    // COMPLETE 73-BOOK CATHOLIC BIBLE
+    // 73-BOOK CATHOLIC BIBLE WITH SPANISH USCCB LINKS
     var BIBLE_BOOKS = [
-      // PENTATEUCH (5)
-      { abbr: 'genesis', name: 'Génesis', chapters: 50, type: 'ot' },
-      { abbr: 'exodo', name: 'Éxodo', chapters: 40, type: 'ot' },
-      { abbr: 'levitico', name: 'Levítico', chapters: 27, type: 'ot' },
-      { abbr: 'numeros', name: 'Números', chapters: 36, type: 'ot' },
-      { abbr: 'deuteronomio', name: 'Deuteronomio', chapters: 34, type: 'ot' },
-      // HISTORICAL BOOKS (16)
-      { abbr: 'josue', name: 'Josué', chapters: 24, type: 'ot' },
-      { abbr: 'jueces', name: 'Jueces', chapters: 21, type: 'ot' },
-      { abbr: 'rut', name: 'Rut', chapters: 4, type: 'ot' },
-      { abbr: '1samuel', name: '1 Samuel', chapters: 31, type: 'ot' },
-      { abbr: '2samuel', name: '2 Samuel', chapters: 24, type: 'ot' },
-      { abbr: '1reyes', name: '1 Reyes', chapters: 22, type: 'ot' },
-      { abbr: '2reyes', name: '2 Reyes', chapters: 25, type: 'ot' },
-      { abbr: '1cronicas', name: '1 Crónicas', chapters: 29, type: 'ot' },
-      { abbr: '2cronicas', name: '2 Crónicas', chapters: 36, type: 'ot' },
-      { abbr: 'esdras', name: 'Esdras', chapters: 10, type: 'ot' },
-      { abbr: 'nehemias', name: 'Nehemías', chapters: 13, type: 'ot' },
-      { abbr: 'tobias', name: 'Tobías', chapters: 14, type: 'ot' }, // Deuterocanonical
-      { abbr: 'judit', name: 'Judit', chapters: 16, type: 'ot' }, // Deuterocanonical
-      { abbr: 'ester', name: 'Ester', chapters: 10, type: 'ot' },
-      { abbr: '1macabeos', name: '1 Macabeos', chapters: 16, type: 'ot' }, // Deuterocanonical
-      { abbr: '2macabeos', name: '2 Macabeos', chapters: 15, type: 'ot' }, // Deuterocanonical
-      // WISDOM BOOKS (7)
-      { abbr: 'job', name: 'Job', chapters: 42, type: 'ot' },
-      { abbr: 'salmos', name: 'Salmos', chapters: 150, type: 'psalm' },
-      { abbr: 'proverbios', name: 'Proverbios', chapters: 31, type: 'ot' },
-      { abbr: 'eclesiastes', name: 'Eclesiastés', chapters: 12, type: 'ot' },
-      { abbr: 'cantar', name: 'Cantar de los Cantares', chapters: 8, type: 'ot' },
-      { abbr: 'sabiduria', name: 'Sabiduría', chapters: 19, type: 'ot' }, // Deuterocanonical
-      { abbr: 'eclesiastico', name: 'Eclesiástico (Sirácida)', chapters: 51, type: 'ot' }, // Deuterocanonical
-      // MAJOR PROPHETS (6)
-      { abbr: 'isaias', name: 'Isaías', chapters: 66, type: 'ot' },
-      { abbr: 'jeremias', name: 'Jeremías', chapters: 52, type: 'ot' },
-      { abbr: 'lamentaciones', name: 'Lamentaciones', chapters: 5, type: 'ot' },
-      { abbr: 'baruc', name: 'Baruc', chapters: 6, type: 'ot' }, // Deuterocanonical
-      { abbr: 'ezequiel', name: 'Ezequiel', chapters: 48, type: 'ot' },
-      { abbr: 'daniel', name: 'Daniel', chapters: 14, type: 'ot' }, // 14 chapters in Catholic
-      // MINOR PROPHETS (12)
-      { abbr: 'oseas', name: 'Oseas', chapters: 14, type: 'ot' },
-      { abbr: 'joel', name: 'Joel', chapters: 4, type: 'ot' },
-      { abbr: 'amos', name: 'Amós', chapters: 9, type: 'ot' },
-      { abbr: 'abdias', name: 'Abdías', chapters: 1, type: 'ot' },
-      { abbr: 'jonas', name: 'Jonás', chapters: 4, type: 'ot' },
-      { abbr: 'miqueas', name: 'Miqueas', chapters: 7, type: 'ot' },
-      { abbr: 'nahum', name: 'Nahúm', chapters: 3, type: 'ot' },
-      { abbr: 'habacuc', name: 'Habacuc', chapters: 3, type: 'ot' },
-      { abbr: 'sofonias', name: 'Sofonías', chapters: 3, type: 'ot' },
-      { abbr: 'ageo', name: 'Ageo', chapters: 2, type: 'ot' },
-      { abbr: 'zacarias', name: 'Zacarías', chapters: 14, type: 'ot' },
-      { abbr: 'malaquias', name: 'Malaquías', chapters: 3, type: 'ot' },
-      // GOSPELS (4)
-      { abbr: 'mateo', name: 'Mateo', chapters: 28, type: 'gospel' },
-      { abbr: 'marcos', name: 'Marcos', chapters: 16, type: 'gospel' },
-      { abbr: 'lucas', name: 'Lucas', chapters: 24, type: 'gospel' },
-      { abbr: 'juan', name: 'Juan', chapters: 21, type: 'gospel' },
-      // ACTS
-      { abbr: 'hechos', name: 'Hechos de los Apóstoles', chapters: 28, type: 'epistle' },
-      // PAULINE EPISTLES (13)
-      { abbr: 'romanos', name: 'Romanos', chapters: 16, type: 'epistle' },
-      { abbr: '1corintios', name: '1 Corintios', chapters: 16, type: 'epistle' },
-      { abbr: '2corintios', name: '2 Corintios', chapters: 13, type: 'epistle' },
-      { abbr: 'galatas', name: 'Gálatas', chapters: 6, type: 'epistle' },
-      { abbr: 'efesios', name: 'Efesios', chapters: 6, type: 'epistle' },
-      { abbr: 'filipenses', name: 'Filipenses', chapters: 4, type: 'epistle' },
-      { abbr: 'colosenses', name: 'Colosenses', chapters: 4, type: 'epistle' },
-      { abbr: '1tesalonicenses', name: '1 Tesalonicenses', chapters: 5, type: 'epistle' },
-      { abbr: '2tesalonicenses', name: '2 Tesalonicenses', chapters: 3, type: 'epistle' },
-      { abbr: '1timoteo', name: '1 Timoteo', chapters: 6, type: 'epistle' },
-      { abbr: '2timoteo', name: '2 Timoteo', chapters: 4, type: 'epistle' },
-      { abbr: 'tito', name: 'Tito', chapters: 3, type: 'epistle' },
-      { abbr: 'filemon', name: 'Filemón', chapters: 1, type: 'epistle' },
-      // GENERAL EPISTLES (8)
-      { abbr: 'hebreos', name: 'Hebreos', chapters: 13, type: 'epistle' },
-      { abbr: 'santiago', name: 'Santiago', chapters: 5, type: 'epistle' },
-      { abbr: '1pedro', name: '1 Pedro', chapters: 5, type: 'epistle' },
-      { abbr: '2pedro', name: '2 Pedro', chapters: 3, type: 'epistle' },
-      { abbr: '1juan', name: '1 Juan', chapters: 5, type: 'epistle' },
-      { abbr: '2juan', name: '2 Juan', chapters: 1, type: 'epistle' },
-      { abbr: '3juan', name: '3 Juan', chapters: 1, type: 'epistle' },
-      { abbr: 'judas', name: 'Judas', chapters: 1, type: 'epistle' },
-      // REVELATION
-      { abbr: 'apocalipsis', name: 'Apocalipsis', chapters: 22, type: 'epistle' }
+      { abbr: 'genesis', name: 'Génesis', usccb: 'genesis', chapters: 50, type: 'ot' },
+      { abbr: 'exodo', name: 'Éxodo', usccb: 'exodus', chapters: 40, type: 'ot' },
+      { abbr: 'levitico', name: 'Levítico', usccb: 'leviticus', chapters: 27, type: 'ot' },
+      { abbr: 'numeros', name: 'Números', usccb: 'numbers', chapters: 36, type: 'ot' },
+      { abbr: 'deuteronomio', name: 'Deuteronomio', usccb: 'deuteronomy', chapters: 34, type: 'ot' },
+      { abbr: 'josue', name: 'Josué', usccb: 'joshua', chapters: 24, type: 'ot' },
+      { abbr: 'jueces', name: 'Jueces', usccb: 'judges', chapters: 21, type: 'ot' },
+      { abbr: 'rut', name: 'Rut', usccb: 'ruth', chapters: 4, type: 'ot' },
+      { abbr: '1samuel', name: '1 Samuel', usccb: '1samuel', chapters: 31, type: 'ot' },
+      { abbr: '2samuel', name: '2 Samuel', usccb: '2samuel', chapters: 24, type: 'ot' },
+      { abbr: '1reyes', name: '1 Reyes', usccb: '1kings', chapters: 22, type: 'ot' },
+      { abbr: '2reyes', name: '2 Reyes', usccb: '2kings', chapters: 25, type: 'ot' },
+      { abbr: '1cronicas', name: '1 Crónicas', usccb: '1chronicles', chapters: 29, type: 'ot' },
+      { abbr: '2cronicas', name: '2 Crónicas', usccb: '2chronicles', chapters: 36, type: 'ot' },
+      { abbr: 'esdras', name: 'Esdras', usccb: 'ezra', chapters: 10, type: 'ot' },
+      { abbr: 'nehemias', name: 'Nehemías', usccb: 'nehemiah', chapters: 13, type: 'ot' },
+      { abbr: 'tobias', name: 'Tobías', usccb: 'tobit', chapters: 14, type: 'ot' },
+      { abbr: 'judit', name: 'Judit', usccb: 'judith', chapters: 16, type: 'ot' },
+      { abbr: 'ester', name: 'Ester', usccb: 'esther', chapters: 16, type: 'ot' },
+      { abbr: '1macabeos', name: '1 Macabeos', usccb: '1maccabees', chapters: 16, type: 'ot' },
+      { abbr: '2macabeos', name: '2 Macabeos', usccb: '2maccabees', chapters: 15, type: 'ot' },
+      { abbr: 'job', name: 'Job', usccb: 'job', chapters: 42, type: 'ot' },
+      { abbr: 'salmos', name: 'Salmos', usccb: 'psalms', chapters: 150, type: 'psalm' },
+      { abbr: 'proverbios', name: 'Proverbios', usccb: 'proverbs', chapters: 31, type: 'ot' },
+      { abbr: 'eclesiastes', name: 'Eclesiastés', usccb: 'ecclesiastes', chapters: 12, type: 'ot' },
+      { abbr: 'cantar', name: 'Cantar', usccb: 'songofsongs', chapters: 8, type: 'ot' },
+      { abbr: 'sabiduria', name: 'Sabiduría', usccb: 'wisdom', chapters: 19, type: 'ot' },
+      { abbr: 'eclesiastico', name: 'Sirácida', usccb: 'sirach', chapters: 51, type: 'ot' },
+      { abbr: 'isaias', name: 'Isaías', usccb: 'isaiah', chapters: 66, type: 'ot' },
+      { abbr: 'jeremias', name: 'Jeremías', usccb: 'jeremiah', chapters: 52, type: 'ot' },
+      { abbr: 'lamentaciones', name: 'Lament.', usccb: 'lamentations', chapters: 5, type: 'ot' },
+      { abbr: 'baruc', name: 'Baruc', usccb: 'baruch', chapters: 6, type: 'ot' },
+      { abbr: 'ezequiel', name: 'Ezequiel', usccb: 'ezekiel', chapters: 48, type: 'ot' },
+      { abbr: 'daniel', name: 'Daniel', usccb: 'daniel', chapters: 14, type: 'ot' },
+      { abbr: 'oseas', name: 'Oseas', usccb: 'hosea', chapters: 14, type: 'ot' },
+      { abbr: 'joel', name: 'Joel', usccb: 'joel', chapters: 4, type: 'ot' },
+      { abbr: 'amos', name: 'Amós', usccb: 'amos', chapters: 9, type: 'ot' },
+      { abbr: 'abdias', name: 'Abdías', usccb: 'obadiah', chapters: 1, type: 'ot' },
+      { abbr: 'jonas', name: 'Jonás', usccb: 'jonah', chapters: 4, type: 'ot' },
+      { abbr: 'miqueas', name: 'Miqueas', usccb: 'micah', chapters: 7, type: 'ot' },
+      { abbr: 'nahum', name: 'Nahúm', usccb: 'nahum', chapters: 3, type: 'ot' },
+      { abbr: 'habacuc', name: 'Habacuc', usccb: 'habakkuk', chapters: 3, type: 'ot' },
+      { abbr: 'sofonias', name: 'Sofonías', usccb: 'zephaniah', chapters: 3, type: 'ot' },
+      { abbr: 'ageo', name: 'Ageo', usccb: 'haggai', chapters: 2, type: 'ot' },
+      { abbr: 'zacarias', name: 'Zacarías', usccb: 'zechariah', chapters: 14, type: 'ot' },
+      { abbr: 'malaquias', name: 'Malaquías', usccb: 'malachi', chapters: 3, type: 'ot' },
+      { abbr: 'mateo', name: 'Mateo', usccb: 'matthew', chapters: 28, type: 'gospel' },
+      { abbr: 'marcos', name: 'Marcos', usccb: 'mark', chapters: 16, type: 'gospel' },
+      { abbr: 'lucas', name: 'Lucas', usccb: 'luke', chapters: 24, type: 'gospel' },
+      { abbr: 'juan', name: 'Juan', usccb: 'john', chapters: 21, type: 'gospel' },
+      { abbr: 'hechos', name: 'Hechos', usccb: 'acts', chapters: 28, type: 'epistle' },
+      { abbr: 'romanos', name: 'Romanos', usccb: 'romans', chapters: 16, type: 'epistle' },
+      { abbr: '1corintios', name: '1 Corintios', usccb: '1corinthians', chapters: 16, type: 'epistle' },
+      { abbr: '2corintios', name: '2 Corintios', usccb: '2corinthians', chapters: 13, type: 'epistle' },
+      { abbr: 'galatas', name: 'Gálatas', usccb: 'galatians', chapters: 6, type: 'epistle' },
+      { abbr: 'efesios', name: 'Efesios', usccb: 'ephesians', chapters: 6, type: 'epistle' },
+      { abbr: 'filipenses', name: 'Filipenses', usccb: 'philippians', chapters: 4, type: 'epistle' },
+      { abbr: 'colosenses', name: 'Colosenses', usccb: 'colossians', chapters: 4, type: 'epistle' },
+      { abbr: '1tesalonicenses', name: '1 Tesal.', usccb: '1thessalonians', chapters: 5, type: 'epistle' },
+      { abbr: '2tesalonicenses', name: '2 Tesal.', usccb: '2thessalonians', chapters: 3, type: 'epistle' },
+      { abbr: '1timoteo', name: '1 Timoteo', usccb: '1timothy', chapters: 6, type: 'epistle' },
+      { abbr: '2timoteo', name: '2 Timoteo', usccb: '2timothy', chapters: 4, type: 'epistle' },
+      { abbr: 'tito', name: 'Tito', usccb: 'titus', chapters: 3, type: 'epistle' },
+      { abbr: 'filemon', name: 'Filemón', usccb: 'philemon', chapters: 1, type: 'epistle' },
+      { abbr: 'hebreos', name: 'Hebreos', usccb: 'hebrews', chapters: 13, type: 'epistle' },
+      { abbr: 'santiago', name: 'Santiago', usccb: 'james', chapters: 5, type: 'epistle' },
+      { abbr: '1pedro', name: '1 Pedro', usccb: '1peter', chapters: 5, type: 'epistle' },
+      { abbr: '2pedro', name: '2 Pedro', usccb: '2peter', chapters: 3, type: 'epistle' },
+      { abbr: '1juan', name: '1 Juan', usccb: '1john', chapters: 5, type: 'epistle' },
+      { abbr: '2juan', name: '2 Juan', usccb: '2john', chapters: 1, type: 'epistle' },
+      { abbr: '3juan', name: '3 Juan', usccb: '3john', chapters: 1, type: 'epistle' },
+      { abbr: 'judas', name: 'Judas', usccb: 'jude', chapters: 1, type: 'epistle' },
+      { abbr: 'apocalipsis', name: 'Apocalipsis', usccb: 'revelation', chapters: 22, type: 'epistle' }
     ];
 
-    // EMBEDDED SCRIPTURE TEXTS (key passages)
-    var BIBLE_TEXT = {
-      "genesis-1": "1 En el principio creó Dios los cielos y la tierra. 2 Y la tierra estaba desordenada y vacía, y las tinieblas estaban sobre la faz del abismo, y el Espíritu de Dios se movía sobre la faz de las aguas. 3 Y dijo Dios: Sea la luz; y fue la luz. 4 Y vio Dios que la luz era buena; y separó Dios la luz de las tinieblas. 26 Entonces dijo Dios: Hagamos al hombre a nuestra imagen, conforme a nuestra semejanza. 27 Y creó Dios al hombre a su imagen, a imagen de Dios lo creó; varón y hembra los creó. 31 Y vio Dios todo lo que había hecho, y he aquí que era bueno en gran manera.",
-      "genesis-12": "1 Pero Jehová había dicho a Abram: Vete de tu tierra y de tu parentela, y de la casa de tu padre, a la tierra que te mostraré. 2 Y haré de ti una nación grande, y te bendeciré, y engrandeceré tu nombre, y serás bendición. 3 Bendeciré a los que te bendijeren, y a los que te maldijeren maldeciré; y serán benditas en ti todas las familias de la tierra.",
-      "exodo-3": "1 Apacentando Moisés las ovejas de Jetro su suegro, sacerdote de Madián, llevó las ovejas a través del desierto, y llegó hasta Horeb, monte de Dios. 2 Y se le apareció el Ángel de Jehová en una llama de fuego en medio de una zarza. 4 Viendo Jehová que él iba a ver, lo llamó Dios de en medio de la zarza, y dijo: ¡Moisés, Moisés! Y él respondió: Heme aquí. 14 Y respondió Dios a Moisés: YO SOY EL QUE SOY. Y dijo: Así dirás a los hijos de Israel: YO SOY me envió a vosotros.",
-      "exodo-20": "1 Y habló Dios todas estas palabras, diciendo: 2 Yo soy Jehová tu Dios, que te saqué de la tierra de Egipto, de casa de servidumbre. 3 No tendrás dioses ajenos delante de mí. 7 No tomarás el nombre de Jehová tu Dios en vano. 8 Acuérdate del día de reposo para santificarlo. 12 Honra a tu padre y a tu madre. 13 No matarás. 14 No cometerás adulterio. 15 No hurtarás. 16 No hablarás contra tu prójimo falso testimonio. 17 No codiciarás.",
-      "rut-1": "16 Respondió Rut: No me ruegues que te deje, y me aparte de ti; porque a dondequiera que tú fueres, iré yo, y dondequiera que vivieres, viviré. Tu pueblo será mi pueblo, y tu Dios mi Dios. 17 Donde tú murieres, moriré yo, y allí seré sepultada.",
-      "1samuel-3": "1 El joven Samuel ministraba a Jehová en presencia de Elí. 4 Jehová llamó a Samuel; y él respondió: Heme aquí. 9 Dijo Elí a Samuel: Ve y acuéstate; y si te llamare, dirás: Habla, Jehová, porque tu siervo oye. 10 Y vino Jehová y se paró, y llamó como las otras veces: ¡Samuel, Samuel! Entonces Samuel dijo: Habla, porque tu siervo oye.",
-      "job-1": "21 Y dijo: Desnudo salí del vientre de mi madre, y desnudo volveré allá. Jehová dio, y Jehová quitó; sea el nombre de Jehová bendito.",
-      "job-42": "1 Respondió Job a Jehová, y dijo: 2 Yo conozco que todo lo puedes, y que no hay pensamiento que se esconda de ti. 5 De oídas te había oído; mas ahora mis ojos te ven. 6 Por tanto me aborrezco, y me arrepiento en polvo y ceniza.",
-      "salmos-1": "1 Bienaventurado el varón que no anduvo en consejo de malos, ni estuvo en camino de pecadores, ni en silla de escarnecedores se ha sentado; 2 sino que en la ley de Jehová está su delicia, y en su ley medita de día y de noche. 3 Será como árbol plantado junto a corrientes de aguas, que da su fruto en su tiempo, y su hoja no cae; y todo lo que hace, prosperará.",
-      "salmos-23": "1 Jehová es mi pastor; nada me faltará. 2 En lugares de delicados pastos me hará descansar; junto a aguas de reposo me pastoreará. 3 Confortará mi alma; me guiará por sendas de justicia por amor de su nombre. 4 Aunque ande en valle de sombra de muerte, no temeré mal alguno, porque tú estarás conmigo; tu vara y tu cayado me infundirán aliento. 5 Aderezas mesa delante de mí en presencia de mis angustiadores; unges mi cabeza con aceite; mi copa está rebosando. 6 Ciertamente el bien y la misericordia me seguirán todos los días de mi vida, y en la casa de Jehová moraré por largos días.",
-      "salmos-27": "1 Jehová es mi luz y mi salvación; ¿de quién temeré? Jehová es la fortaleza de mi vida; ¿de quién he de atemorizarme? 4 Una cosa he demandado a Jehová, ésta buscaré; que esté yo en la casa de Jehová todos los días de mi vida, para contemplar la hermosura de Jehová. 14 Aguarda a Jehová; esfuérzate, y aliéntese tu corazón; sí, espera a Jehová.",
-      "salmos-42": "1 Como el ciervo brama por las corrientes de las aguas, así clama por ti, oh Dios, el alma mía. 2 Mi alma tiene sed de Dios, del Dios vivo. 5 ¿Por qué te abates, oh alma mía, y te turbas dentro de mí? Espera en Dios; porque aún he de alabarle.",
-      "salmos-51": "1 Ten piedad de mí, oh Dios, conforme a tu misericordia; conforme a la multitud de tus piedades borra mis rebeliones. 2 Lávame más y más de mi maldad, y límpiame de mi pecado. 10 Crea en mí, oh Dios, un corazón limpio, y renueva un espíritu recto dentro de mí. 12 Vuélveme el gozo de tu salvación.",
-      "salmos-63": "1 Dios, Dios mío eres tú; de madrugada te buscaré; mi alma tiene sed de ti. 3 Porque mejor es tu misericordia que la vida; mis labios te alabarán.",
-      "salmos-91": "1 El que habita al abrigo del Altísimo morará bajo la sombra del Omnipotente. 2 Diré yo a Jehová: Esperanza mía, y castillo mío; mi Dios, en quien confiaré. 4 Con sus plumas te cubrirá, y debajo de sus alas estarás seguro. 11 Pues a sus ángeles mandará acerca de ti, que te guarden en todos tus caminos.",
-      "salmos-103": "1 Bendice, alma mía, a Jehová, y bendiga todo mi ser su santo nombre. 2 Bendice, alma mía, a Jehová, y no olvides ninguno de sus beneficios. 3 El es quien perdona todas tus iniquidades, el que sana todas tus dolencias. 8 Misericordioso y clemente es Jehová; lento para la ira, y grande en misericordia. 12 Cuanto está lejos el oriente del occidente, hizo alejar de nosotros nuestras rebeliones.",
-      "salmos-139": "1 Oh Jehová, tú me has examinado y conocido. 2 Tú has conocido mi sentarme y mi levantarme; has entendido desde lejos mis pensamientos. 7 ¿A dónde me iré de tu Espíritu? ¿Y a dónde huiré de tu presencia? 14 Te alabaré; porque formidables, maravillosas son tus obras. 23 Examíname, oh Dios, y conoce mi corazón; pruébame y conoce mis pensamientos.",
-      "salmos-150": "1 ¡Aleluya! Alabad a Dios en su santuario; alabadle en la magnificencia de su firmamento. 6 Todo lo que respira alabe a Jehová. ¡Aleluya!",
-      "proverbios-3": "5 Fíate de Jehová de todo tu corazón, y no te apoyes en tu propia prudencia. 6 Reconócelo en todos tus caminos, y él enderezará tus veredas.",
-      "proverbios-31": "10 Mujer virtuosa, ¿quién la hallará? Porque su estima sobrepasa largamente a la de las piedras preciosas. 25 Fuerza y honor son su vestidura; y se ríe de lo por venir. 26 Abre su boca con sabiduría, y la ley de clemencia está en su lengua. 30 Engañosa es la gracia, y vana la hermosura; la mujer que teme a Jehová, ésa será alabada.",
-      "eclesiastes-3": "1 Todo tiene su tiempo, y todo lo que se quiere debajo del cielo tiene su hora. 2 Tiempo de nacer, y tiempo de morir; tiempo de plantar, y tiempo de arrancar lo plantado. 4 Tiempo de llorar, y tiempo de reír; tiempo de endechar, y tiempo de bailar. 11 Todo lo hizo hermoso en su tiempo.",
-      "cantar-2": "10 Mi amado habló, y me dijo: Levántate, oh amiga mía, hermosa mía, y ven. 11 Porque he aquí ha pasado el invierno, se ha mudado, la lluvia se fue. 12 Se han mostrado las flores en la tierra, el tiempo de la canción ha venido.",
-      "sabiduria-3": "1 Pero las almas de los justos están en la mano de Dios y no les alcanzará tormento alguno. 2 A los ojos de los insensatos pareció que morían, y su tránsito fue considerado aflicción. 3 Pero ellos están en paz.",
-      "eclesiastico-2": "1 Hijo, si te acercas a servir al Señor, prepara tu alma para la prueba. 4 Acepta todo lo que te sobrevenga, y sé sufrido en las vicisitudes de tu humillación. 6 Confía en él, y él te ayudará; endereza tus caminos y espera en él.",
-      "isaias-6": "1 En el año que murió el rey Uzías vi yo al Señor sentado sobre un trono alto y sublime, y sus faldas llenaban el templo. 3 Y el uno al otro daba voces, diciendo: Santo, santo, santo, Jehová de los ejércitos; toda la tierra está llena de su gloria. 8 Después oí la voz del Señor, que decía: ¿A quién enviaré, y quién irá por nosotros? Entonces respondí yo: Heme aquí, envíame a mí.",
-      "isaias-40": "28 ¿No has sabido, no has oído que el Dios eterno es Jehová, el cual creó los confines de la tierra? No desfallece, ni se fatiga con cansancio, y su entendimiento no hay quien lo alcance. 29 El da esfuerzo al cansado, y multiplica las fuerzas al que no tiene ningunas. 31 pero los que esperan a Jehová tendrán nuevas fuerzas; levantarán alas como las águilas; correrán, y no se cansarán; caminarán, y no se fatigarán.",
-      "isaias-53": "3 Despreciado y desechado entre los hombres, varón de dolores, experimentado en quebranto. 4 Ciertamente llevó él nuestras enfermedades, y sufrió nuestros dolores. 5 Mas él herido fue por nuestras rebeliones, molido por nuestros pecados; el castigo de nuestra paz fue sobre él, y por su llaga fuimos nosotros curados.",
-      "jeremias-29": "11 Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, pensamientos de paz, y no de mal, para daros el fin que esperáis. 12 Entonces me invocaréis, y vendréis y oraréis a mí, y yo os oiré. 13 y me buscaréis y me hallaréis, porque me buscaréis de todo vuestro corazón.",
-      "lamentaciones-3": "22 Por la misericordia de Jehová no hemos sido consumidos, porque nunca decayeron sus misericordias. 23 Nuevas son cada mañana; grande es tu fidelidad. 24 Mi porción es Jehová, dijo mi alma; por tanto, en él esperaré.",
-      "ezequiel-37": "1 La mano de Jehová vino sobre mí, y me llevó en el Espíritu de Jehová, y me puso en medio de un valle que estaba lleno de huesos. 3 Y me dijo: Hijo de hombre, ¿vivirán estos huesos? Y dije: Señor Jehová, tú lo sabes. 5 Así ha dicho Jehová el Señor a estos huesos: He aquí, yo hago entrar espíritu en vosotros, y viviréis.",
-      "daniel-3": "17 He aquí nuestro Dios a quien servimos puede librarnos del horno de fuego ardiendo; y de tu mano, oh rey, nos librará. 18 Y si no, sepas, oh rey, que no serviremos a tus dioses, ni tampoco adoraremos la estatua que has levantado.",
-      "oseas-6": "1 Venid y volvamos a Jehová; porque él arrebató, y nos curará; hirió, y nos vendará. 3 Y conoceremos, y proseguiremos en conocer a Jehová; como el alba está dispuesta su salida, y vendrá a nosotros como la lluvia, como la lluvia tardía y temprana a la tierra.",
-      "miqueas-6": "8 Oh hombre, él te ha declarado lo que es bueno, y qué pide Jehová de ti: solamente hacer justicia, y amar misericordia, y humillarte ante tu Dios.",
-      "tobias-4": "15 No hagas a nadie lo que no quieras que te hagan a ti. 19 Bendice al Señor tu Dios en todo momento, pídele que dirija tu camino.",
-      "judit-13": "18 Bendita seas tú, hija, por el Dios Altísimo, más que todas las mujeres de la tierra; y bendito sea el Señor Dios.",
-      "mateo-1": "18 El nacimiento de Jesucristo fue así: Su madre María estaba desposada con José; y antes de que vivieran juntos, se halló que había concebido del Espíritu Santo. 21 Y dará a luz un hijo, y llamarás su nombre Jesús, porque él salvará a su pueblo de sus pecados. 23 He aquí, una virgen concebirá y dará a luz un hijo, y llamarás su nombre Emanuel, que traducido es: Dios con nosotros.",
-      "mateo-5": "1 Viendo las multitudes, subió al monte; y cuando se sentó, se le acercaron sus discípulos. 3 Bienaventurados los pobres en espíritu, porque de ellos es el reino de los cielos. 4 Bienaventurados los que lloran, porque ellos serán consolados. 5 Bienaventurados los mansos, porque ellos heredarán la tierra. 6 Bienaventurados los que tienen hambre y sed de justicia, porque ellos serán saciados. 7 Bienaventurados los misericordiosos, porque ellos alcanzarán misericordia. 8 Bienaventurados los de limpio corazón, porque ellos verán a Dios. 9 Bienaventurados los pacificadores, porque ellos serán llamados hijos de Dios. 14 Vosotros sois la luz del mundo.",
-      "mateo-6": "9 Vosotros, pues, oraréis así: Padre nuestro que estás en los cielos, santificado sea tu nombre. 10 Venga tu reino. Hágase tu voluntad, como en el cielo, así también en la tierra. 11 El pan nuestro de cada día, dánoslo hoy. 12 Y perdónanos nuestras deudas, como también nosotros perdonamos a nuestros deudores. 33 Mas buscad primeramente el reino de Dios y su justicia, y todas estas cosas os serán añadidas.",
-      "mateo-7": "7 Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá. 12 Así que, todas las cosas que queráis que los hombres hagan con vosotros, así también haced vosotros con ellos.",
-      "mateo-11": "28 Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar. 29 Llevad mi yugo sobre vosotros, y aprended de mí, que soy manso y humilde de corazón; y hallaréis descanso para vuestras almas. 30 Porque mi yugo es fácil, y ligera mi carga.",
-      "mateo-28": "18 Y Jesús se acercó y les habló diciendo: Toda potestad me es dada en el cielo y en la tierra. 19 Por tanto, id, y haced discípulos a todas las naciones, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo. 20 enseñándoles que guarden todas las cosas que os he mandado; y he aquí yo estoy con vosotros todos los días, hasta el fin del mundo.",
-      "marcos-1": "1 Principio del evangelio de Jesucristo, Hijo de Dios. 9 Aconteció en aquellos días, que Jesús vino de Nazaret de Galilea, y fue bautizado por Juan en el Jordán. 10 Y luego, cuando subía del agua, vio abrirse los cielos, y al Espíritu como paloma que descendía sobre él. 11 Y vino una voz de los cielos que decía: Tú eres mi Hijo amado; en ti tengo complacencia. 15 diciendo: El tiempo se ha cumplido, y el reino de Dios se ha acercado; arrepentíos, y creed en el evangelio.",
-      "marcos-10": "45 Porque el Hijo del Hombre no vino para ser servido, sino para servir, y para dar su vida en rescate por muchos.",
-      "lucas-1": "26 Al sexto mes el ángel Gabriel fue enviado por Dios a una ciudad de Galilea, llamada Nazaret, 27 a una virgen desposada con un varón que se llamaba José, de la casa de David; y el nombre de la virgen era María. 28 Y entrando el ángel en donde ella estaba, dijo: ¡Salve, muy favorecida! El Señor es contigo; bendita tú entre las mujeres. 38 Entonces María dijo: He aquí la sierva del Señor; hágase conmigo conforme a tu palabra. 46 Entonces María dijo: Engrandece mi alma al Señor; 47 Y mi espíritu se regocija en Dios mi Salvador.",
-      "lucas-2": "7 Y dio a luz a su hijo primogénito, y lo envolvió en pañales, y lo acostó en un pesebre, porque no había lugar para ellos en el mesón. 10 Pero el ángel les dijo: No temáis; porque he aquí os doy nuevas de gran gozo. 11 que os ha nacido hoy, en la ciudad de David, un Salvador, que es Cristo el Señor. 14 ¡Gloria a Dios en las alturas, y en la tierra paz, buena voluntad para con los hombres! 19 Pero María guardaba todas estas cosas, meditándolas en su corazón.",
-      "lucas-10": "27 Aquél, respondiendo, dijo: Amarás al Señor tu Dios con todo tu corazón, y con toda tu alma, y con todas tus fuerzas, y con toda tu mente; y a tu prójimo como a ti mismo.",
-      "lucas-15": "4 ¿Qué hombre de vosotros, teniendo cien ovejas, si pierde una de ellas, no deja las noventa y nueve en el desierto, y va tras la que se perdió, hasta encontrarla? 7 Os digo que así habrá más gozo en el cielo por un pecador que se arrepiente. 20 Y levantándose, vino a su padre. Y cuando aún estaba lejos, lo vio su padre, y fue movido a misericordia, y corrió, y se echó sobre su cuello, y le besó.",
-      "juan-1": "1 En el principio era el Verbo, y el Verbo era con Dios, y el Verbo era Dios. 4 En él estaba la vida, y la vida era la luz de los hombres. 14 Y aquel Verbo fue hecho carne, y habitó entre nosotros, y vimos su gloria, gloria como del unigénito del Padre, lleno de gracia y de verdad.",
-      "juan-3": "16 Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna. 17 Porque no envió Dios a su Hijo al mundo para condenar al mundo, sino para que el mundo sea salvo por él.",
-      "juan-6": "35 Jesús les dijo: Yo soy el pan de vida; el que a mí viene, nunca tendrá hambre; y el que en mí cree, no tendrá sed jamás.",
-      "juan-8": "12 Otra vez Jesús les habló, diciendo: Yo soy la luz del mundo; el que me sigue, no andará en tinieblas, sino que tendrá la luz de la vida. 32 y conoceréis la verdad, y la verdad os hará libres.",
-      "juan-10": "10 Yo he venido para que tengan vida, y para que la tengan en abundancia. 11 Yo soy el buen pastor; el buen pastor su vida da por las ovejas.",
-      "juan-11": "25 Le dijo Jesús: Yo soy la resurrección y la vida; el que cree en mí, aunque esté muerto, vivirá. 26 Y todo aquel que vive y cree en mí, no morirá eternamente.",
-      "juan-14": "1 No se turbe vuestro corazón; creéis en Dios, creed también en mí. 2 En la casa de mi Padre muchas moradas hay. 6 Jesús le dijo: Yo soy el camino, y la verdad, y la vida; nadie viene al Padre, sino por mí. 27 La paz os dejo, mi paz os doy; yo no os la doy como el mundo la da. No se turbe vuestro corazón, ni tenga miedo.",
-      "juan-15": "1 Yo soy la vid verdadera, y mi Padre es el labrador. 5 Yo soy la vid, vosotros los pámpanos; el que permanece en mí, y yo en él, éste lleva mucho fruto; porque separados de mí nada podéis hacer. 9 Como el Padre me ha amado, así también yo os he amado; permaneced en mi amor. 12 Este es mi mandamiento: Que os améis unos a otros, como yo os he amado. 13 Nadie tiene mayor amor que este, que uno ponga su vida por sus amigos.",
-      "hechos-2": "1 Cuando llegó el día de Pentecostés, estaban todos unánimes juntos. 2 Y de repente vino del cielo un estruendo como de un viento recio que soplaba. 4 Y fueron todos llenos del Espíritu Santo.",
-      "romanos-5": "1 Justificados, pues, por la fe, tenemos paz para con Dios por medio de nuestro Señor Jesucristo. 8 Mas Dios muestra su amor para con nosotros, en que siendo aún pecadores, Cristo murió por nosotros.",
-      "romanos-8": "1 Ahora, pues, ninguna condenación hay para los que están en Cristo Jesús. 28 Y sabemos que a los que aman a Dios, todas las cosas les ayudan a bien. 31 ¿Qué, pues, diremos a esto? Si Dios es por nosotros, ¿quién contra nosotros? 35 ¿Quién nos separará del amor de Cristo? 37 Antes, en todas estas cosas somos más que vencedores por medio de aquel que nos amó. 38 Por lo cual estoy seguro de que ni la muerte, ni la vida, ni ángeles, ni principados, ni lo presente, ni lo por venir, 39 ni lo alto, ni lo profundo, ni ninguna otra cosa creada nos podrá separar del amor de Dios, que es en Cristo Jesús Señor nuestro.",
-      "romanos-12": "1 Así que, hermanos, os ruego por las misericordias de Dios, que presentéis vuestros cuerpos en sacrificio vivo, santo, agradable a Dios. 2 No os conforméis a este siglo, sino transformaos por medio de la renovación de vuestro entendimiento. 9 El amor sea sin fingimiento. Aborreced lo malo, seguid lo bueno. 21 No seas vencido de lo malo, sino vence con el bien el mal.",
-      "1corintios-13": "1 Si yo hablase lenguas humanas y angélicas, y no tengo amor, vengo a ser como metal que resuena. 4 El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece. 7 Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta. 8 El amor nunca deja de ser. 13 Y ahora permanecen la fe, la esperanza y el amor, estos tres; pero el mayor de ellos es el amor.",
-      "2corintios-4": "7 Pero tenemos este tesoro en vasos de barro, para que la excelencia del poder sea de Dios, y no de nosotros. 16 Por tanto, no desmayamos; antes aunque este nuestro hombre exterior se va desgastando, el interior no obstante se renueva de día en día. 17 Porque esta leve tribulación momentánea produce en nosotros un cada vez más excelente y eterno peso de gloria.",
-      "2corintios-12": "9 Y me ha dicho: Bástate mi gracia; porque mi poder se perfecciona en la debilidad. Por tanto, de buena gana me gloriaré más bien en mis debilidades, para que repose sobre mí el poder de Cristo.",
-      "galatas-2": "20 Con Cristo estoy juntamente crucificado, y ya no vivo yo, mas vive Cristo en mí; y lo que ahora vivo en la carne, lo vivo en la fe del Hijo de Dios, el cual me amó y se entregó a sí mismo por mí.",
-      "galatas-5": "22 Mas el fruto del Espíritu es amor, gozo, paz, paciencia, benignidad, bondad, fe, 23 mansedumbre, templanza; contra tales cosas no hay ley.",
-      "efesios-2": "8 Porque por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios. 10 Porque somos hechura suya, creados en Cristo Jesús para buenas obras.",
-      "efesios-3": "20 Y a Aquel que es poderoso para hacer todas las cosas mucho más abundantemente de lo que pedimos o entendemos, según el poder que actúa en nosotros.",
-      "efesios-6": "10 Por lo demás, hermanos míos, fortaleceos en el Señor, y en el poder de su fuerza. 11 Vestíos de toda la armadura de Dios, para que podáis estar firmes contra las asechanzas del diablo.",
-      "filipenses-1": "6 estando persuadido de esto, que el que comenzó en vosotros la buena obra, la perfeccionará hasta el día de Jesucristo.",
-      "filipenses-2": "5 Haya, pues, en vosotros este sentir que hubo también en Cristo Jesús, 10 para que en el nombre de Jesús se doble toda rodilla. 13 porque Dios es el que en vosotros produce así el querer como el hacer, por su buena voluntad.",
-      "filipenses-4": "4 Regocijaos en el Señor siempre. Otra vez digo: ¡Regocijaos! 6 Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios en toda oración y ruego, con acción de gracias. 7 Y la paz de Dios, que sobrepasa todo entendimiento, guardará vuestros corazones y vuestros pensamientos en Cristo Jesús. 8 Por lo demás, hermanos, todo lo que es verdadero, todo lo honesto, todo lo justo, todo lo puro, todo lo amable, todo lo que es de buen nombre; si hay virtud alguna, si algo digno de alabanza, en esto pensad. 13 Todo lo puedo en Cristo que me fortalece.",
-      "colosenses-3": "1 Si, pues, habéis resucitado con Cristo, buscad las cosas de arriba, donde está Cristo sentado a la diestra de Dios. 2 Poned la mira en las cosas de arriba, no en las de la tierra. 12 Vestíos, pues, como escogidos de Dios, santos y amados, de entrañable misericordia, de benignidad, de humildad, de mansedumbre, de paciencia. 14 Y sobre todas estas cosas vestíos de amor, que es el vínculo perfecto.",
-      "1tesalonicenses-5": "16 Estad siempre gozosos. 17 Orad sin cesar. 18 Dad gracias en todo, porque esta es la voluntad de Dios para con vosotros en Cristo Jesús.",
-      "hebreos-11": "1 Es, pues, la fe la certeza de lo que se espera, la convicción de lo que no se ve. 6 Pero sin fe es imposible agradar a Dios; porque es necesario que el que se acerca a Dios crea que le hay, y que es galardonador de los que le buscan.",
-      "hebreos-12": "1 Por tanto, nosotros también, teniendo en derredor nuestro tan grande nube de testigos, despojémonos de todo peso y del pecado que nos asedia, y corramos con paciencia la carrera que tenemos por delante. 2 puestos los ojos en Jesús, el autor y consumador de la fe.",
-      "santiago-1": "2 Hermanos míos, tened por sumo gozo cuando os halléis en diversas pruebas, 5 Y si alguno de vosotros tiene falta de sabiduría, pídala a Dios, el cual da a todos abundantemente y sin reproche, y le será dada. 17 Toda buena dádiva y todo don perfecto desciende de lo alto, del Padre de las luces.",
-      "1pedro-5": "7 echando toda vuestra ansiedad sobre él, porque él tiene cuidado de vosotros.",
-      "1juan-4": "7 Amados, amémonos unos a otros; porque el amor es de Dios. Todo aquel que ama, es nacido de Dios, y conoce a Dios. 8 El que no ama, no ha conocido a Dios; porque Dios es amor. 16 Y nosotros hemos conocido y creído el amor que Dios tiene para con nosotros. Dios es amor; y el que permanece en amor, permanece en Dios, y Dios en él. 18 En el amor no hay temor, sino que el perfecto amor echa fuera el temor.",
-      "apocalipsis-21": "1 Vi un cielo nuevo y una tierra nueva; porque el primer cielo y la primera tierra pasaron. 3 Y oí una gran voz del cielo que decía: He aquí el tabernáculo de Dios con los hombres, y él morará con ellos. 4 Enjugará Dios toda lágrima de los ojos de ellos; y ya no habrá muerte, ni habrá más llanto, ni clamor, ni dolor; porque las primeras cosas pasaron. 5 Y el que estaba sentado en el trono dijo: He aquí, yo hago nuevas todas las cosas."
+    // ROSARY MYSTERIES WITH MEDITATIONS
+    var ROSARY_MYSTERIES = {
+      joyful: { 
+        name: 'Misterios Gozosos', day: 'Lunes y Sábado',
+        mysteries: [
+          { title: '1º La Anunciación', text: 'El ángel Gabriel anuncia a María que será la madre del Salvador. María, con humildad perfecta, acepta la voluntad de Dios.', fruit: 'Humildad' },
+          { title: '2º La Visitación', text: 'María visita a su prima Isabel llevando a Jesús en su vientre. El encuentro está lleno de gozo y el Espíritu Santo.', fruit: 'Amor al Prójimo' },
+          { title: '3º El Nacimiento de Jesús', text: 'En la pobreza de un pesebre, nace el Rey del universo. Dios se hace pequeño por amor a nosotros.', fruit: 'Desprendimiento' },
+          { title: '4º La Presentación en el Templo', text: 'María y José presentan a Jesús en el Templo, cumpliendo la ley. Simeón profetiza el dolor que traspasará el corazón de María.', fruit: 'Obediencia' },
+          { title: '5º El Niño Perdido y Hallado', text: 'Jesús, a los doce años, es encontrado en el Templo enseñando. Nos recuerda que debemos estar en las cosas del Padre.', fruit: 'Gozo de Encontrar a Jesús' }
+        ]
+      },
+      sorrowful: {
+        name: 'Misterios Dolorosos', day: 'Martes y Viernes',
+        mysteries: [
+          { title: '1º La Oración en el Huerto', text: 'Jesús ora en Getsemaní, sudando sangre por la angustia. Acepta la voluntad del Padre aunque le cueste la vida.', fruit: 'Dolor por los Pecados' },
+          { title: '2º La Flagelación', text: 'Jesús es azotado cruelmente. Cada golpe es por nuestros pecados; su sangre nos purifica.', fruit: 'Mortificación' },
+          { title: '3º La Coronación de Espinas', text: 'Los soldados se burlan de Jesús, coronándolo con espinas. El Rey de reyes es humillado por amor.', fruit: 'Desprecio del Mundo' },
+          { title: '4º Jesús Carga la Cruz', text: 'Jesús carga el peso de la cruz y de nuestros pecados. Cada paso es un acto de amor infinito.', fruit: 'Paciencia' },
+          { title: '5º La Crucifixión', text: 'Jesús muere en la cruz, entregando su vida por la salvación del mundo. "Todo está cumplido."', fruit: 'Conversión' }
+        ]
+      },
+      glorious: {
+        name: 'Misterios Gloriosos', day: 'Miércoles y Domingo',
+        mysteries: [
+          { title: '1º La Resurrección', text: 'Jesús resucita al tercer día, venciendo la muerte. La tumba vacía es prueba de su victoria.', fruit: 'Fe' },
+          { title: '2º La Ascensión', text: 'Jesús sube al cielo ante sus discípulos. Va a prepararnos un lugar junto al Padre.', fruit: 'Esperanza' },
+          { title: '3º La Venida del Espíritu Santo', text: 'El Espíritu Santo desciende sobre los apóstoles en Pentecostés. La Iglesia nace con poder y fuego.', fruit: 'Amor de Dios' },
+          { title: '4º La Asunción de María', text: 'María es llevada al cielo en cuerpo y alma. Su fidelidad es recompensada con la gloria celestial.', fruit: 'Gracia de una Buena Muerte' },
+          { title: '5º La Coronación de María', text: 'María es coronada Reina del cielo y la tierra. Intercede por nosotros como Madre y Reina.', fruit: 'Confianza en María' }
+        ]
+      },
+      luminous: {
+        name: 'Misterios Luminosos', day: 'Jueves',
+        mysteries: [
+          { title: '1º El Bautismo de Jesús', text: 'Jesús es bautizado en el Jordán. El Padre proclama: "Este es mi Hijo amado." El Espíritu desciende como paloma.', fruit: 'Apertura al Espíritu Santo' },
+          { title: '2º Las Bodas de Caná', text: 'Jesús realiza su primer milagro por intercesión de María. "Hagan lo que Él les diga" - palabras para toda la vida.', fruit: 'Fidelidad' },
+          { title: '3º El Anuncio del Reino', text: 'Jesús proclama el Reino de Dios y llama a la conversión. Las bienaventuranzas son el camino de la felicidad verdadera.', fruit: 'Conversión' },
+          { title: '4º La Transfiguración', text: 'Jesús se transfigura en el monte, mostrando su gloria divina. Pedro, Santiago y Juan ven un destello del cielo.', fruit: 'Deseo de Santidad' },
+          { title: '5º La Institución de la Eucaristía', text: 'Jesús nos da su Cuerpo y Sangre en la Última Cena. "Hagan esto en memoria mía" - el mayor regalo de amor.', fruit: 'Adoración Eucarística' }
+        ]
+      }
     };
 
-    // PRAYERS IN SPANISH
+    // COMPLETE PRAYERS
     var PRAYERS = {
-      rosary_joyful: { title: "Misterios Gozosos", subtitle: "Lunes y Sábado", content: '<p class="instruction">Se rezan los lunes y sábados</p><div class="mystery"><div class="mystery-title">1º La Anunciación</div><p>"Hágase en mí según tu palabra." (Lc 1,38)</p><p class="mystery-fruit">Fruto: Humildad</p></div><div class="mystery"><div class="mystery-title">2º La Visitación</div><p>"Bendita tú entre las mujeres." (Lc 1,42)</p><p class="mystery-fruit">Fruto: Amor al Prójimo</p></div><div class="mystery"><div class="mystery-title">3º El Nacimiento</div><p>"Dio a luz a su hijo primogénito." (Lc 2,7)</p><p class="mystery-fruit">Fruto: Desprendimiento</p></div><div class="mystery"><div class="mystery-title">4º La Presentación</div><p>"Luz para iluminar a las naciones." (Lc 2,32)</p><p class="mystery-fruit">Fruto: Obediencia</p></div><div class="mystery"><div class="mystery-title">5º El Niño Perdido y Hallado</div><p>"Debo ocuparme de las cosas de mi Padre." (Lc 2,49)</p><p class="mystery-fruit">Fruto: Gozo de Encontrar a Jesús</p></div>' },
-      rosary_sorrowful: { title: "Misterios Dolorosos", subtitle: "Martes y Viernes", content: '<p class="instruction">Se rezan los martes y viernes</p><div class="mystery"><div class="mystery-title">1º La Oración en el Huerto</div><p>"No se haga mi voluntad, sino la tuya." (Lc 22,42)</p><p class="mystery-fruit">Fruto: Dolor por los Pecados</p></div><div class="mystery"><div class="mystery-title">2º La Flagelación</div><p>"Pilato mandó azotarlo." (Jn 19,1)</p><p class="mystery-fruit">Fruto: Mortificación</p></div><div class="mystery"><div class="mystery-title">3º La Coronación de Espinas</div><p>"Trenzaron una corona de espinas." (Mt 27,29)</p><p class="mystery-fruit">Fruto: Desprecio del Mundo</p></div><div class="mystery"><div class="mystery-title">4º La Cruz a Cuestas</div><p>"Cargando con su cruz, salió." (Jn 19,17)</p><p class="mystery-fruit">Fruto: Paciencia</p></div><div class="mystery"><div class="mystery-title">5º La Crucifixión</div><p>"Padre, en tus manos encomiendo mi espíritu." (Lc 23,46)</p><p class="mystery-fruit">Fruto: Conversión</p></div>' },
-      rosary_glorious: { title: "Misterios Gloriosos", subtitle: "Miércoles y Domingo", content: '<div class="mystery"><div class="mystery-title">1º La Resurrección</div><p>"No está aquí, ha resucitado." (Mt 28,6)</p><p class="mystery-fruit">Fruto: Fe</p></div><div class="mystery"><div class="mystery-title">2º La Ascensión</div><p>"Fue llevado al cielo." (Mc 16,19)</p><p class="mystery-fruit">Fruto: Esperanza</p></div><div class="mystery"><div class="mystery-title">3º Pentecostés</div><p>"Quedaron todos llenos del Espíritu Santo." (Hch 2,4)</p><p class="mystery-fruit">Fruto: Amor de Dios</p></div><div class="mystery"><div class="mystery-title">4º La Asunción de María</div><p>"Proclama mi alma la grandeza del Señor." (Lc 1,46)</p><p class="mystery-fruit">Fruto: Buena Muerte</p></div><div class="mystery"><div class="mystery-title">5º Coronación de María</div><p>"Una Mujer vestida del sol." (Ap 12,1)</p><p class="mystery-fruit">Fruto: Confianza en María</p></div>' },
-      rosary_luminous: { title: "Misterios Luminosos", subtitle: "Jueves", content: '<div class="mystery"><div class="mystery-title">1º El Bautismo de Jesús</div><p>"Tú eres mi Hijo amado." (Lc 3,22)</p><p class="mystery-fruit">Fruto: Apertura al Espíritu</p></div><div class="mystery"><div class="mystery-title">2º Las Bodas de Caná</div><p>"Haced lo que Él os diga." (Jn 2,5)</p><p class="mystery-fruit">Fruto: Fidelidad</p></div><div class="mystery"><div class="mystery-title">3º El Anuncio del Reino</div><p>"Convertíos y creed." (Mc 1,15)</p><p class="mystery-fruit">Fruto: Conversión</p></div><div class="mystery"><div class="mystery-title">4º La Transfiguración</div><p>"Su rostro resplandeció como el sol." (Mt 17,2)</p><p class="mystery-fruit">Fruto: Valor Espiritual</p></div><div class="mystery"><div class="mystery-title">5º La Eucaristía</div><p>"Esto es mi Cuerpo." (Lc 22,19)</p><p class="mystery-fruit">Fruto: Adoración</p></div>' },
-      anima_christi: { title: "Anima Christi", subtitle: "Alma de Cristo", content: '<p>Alma de Cristo, santifícame.<br>Cuerpo de Cristo, sálvame.<br>Sangre de Cristo, embriágame.<br>Agua del costado de Cristo, lávame.<br>Pasión de Cristo, confórtame.<br>Oh buen Jesús, óyeme.<br>Dentro de tus llagas, escóndeme.<br>No permitas que me aparte de Ti.<br>Del enemigo, defiéndeme.<br>En la hora de mi muerte, llámame.<br>Y mándame ir a Ti,<br>Para que con tus Santos te alabe<br>Por los siglos de los siglos. <strong>Amén.</strong></p>' },
-      divine_mercy: { title: "Coronilla de la Divina Misericordia", subtitle: "", content: '<h4>Oración Inicial</h4><p><strong>Padre Eterno, te ofrezco el Cuerpo y la Sangre, el Alma y la Divinidad de tu Amadísimo Hijo, nuestro Señor Jesucristo, como propiciación de nuestros pecados y los del mundo entero.</strong></p><h4>En cada decena (10 veces):</h4><p><strong>Por Su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.</strong></p><h4>Al final (3 veces):</h4><p><strong>Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.</strong></p>' }
+      padre_nuestro: { title: "Padre Nuestro", subtitle: "La Oración del Señor", content: '<p><strong>Padre nuestro, que estás en el cielo,</strong><br>santificado sea tu Nombre;<br>venga a nosotros tu reino;<br>hágase tu voluntad en la tierra como en el cielo.<br><br>Danos hoy nuestro pan de cada día;<br>perdona nuestras ofensas,<br>como también nosotros perdonamos a los que nos ofenden;<br>no nos dejes caer en la tentación,<br>y líbranos del mal.<br><br><strong>Amén.</strong></p>' },
+      ave_maria: { title: "Ave María", subtitle: "Salutación Angélica", content: '<p><strong>Dios te salve, María, llena eres de gracia;</strong><br>el Señor es contigo.<br>Bendita tú eres entre todas las mujeres,<br>y bendito es el fruto de tu vientre, Jesús.<br><br><strong>Santa María, Madre de Dios,</strong><br>ruega por nosotros, pecadores,<br>ahora y en la hora de nuestra muerte.<br><br><strong>Amén.</strong></p>' },
+      gloria: { title: "Gloria al Padre", subtitle: "Doxología Menor", content: '<p><strong>Gloria al Padre, y al Hijo, y al Espíritu Santo.</strong><br><br>Como era en el principio, ahora y siempre,<br>por los siglos de los siglos.<br><br><strong>Amén.</strong></p>' },
+      credo: { title: "Credo", subtitle: "Símbolo de los Apóstoles", content: '<p><strong>Creo en Dios, Padre todopoderoso,</strong><br>Creador del cielo y de la tierra.<br><br>Creo en Jesucristo, su único Hijo, nuestro Señor,<br>que fue concebido por obra y gracia del Espíritu Santo,<br>nació de Santa María Virgen,<br>padeció bajo el poder de Poncio Pilato,<br>fue crucificado, muerto y sepultado,<br>descendió a los infiernos,<br>al tercer día resucitó de entre los muertos,<br>subió a los cielos<br>y está sentado a la derecha de Dios, Padre todopoderoso.<br>Desde allí ha de venir a juzgar a vivos y muertos.<br><br>Creo en el Espíritu Santo,<br>la santa Iglesia católica,<br>la comunión de los santos,<br>el perdón de los pecados,<br>la resurrección de la carne<br>y la vida eterna.<br><br><strong>Amén.</strong></p>' },
+      acto_contricion: { title: "Acto de Contrición", subtitle: "Oración de Arrepentimiento", content: '<p><strong>Señor mío Jesucristo,</strong><br>Dios y Hombre verdadero,<br>Creador, Padre y Redentor mío;<br>por ser Vos quien sois, Bondad infinita,<br>y porque os amo sobre todas las cosas,<br>me pesa de todo corazón haberos ofendido;<br>también me pesa porque podéis castigarme<br>con las penas del infierno.<br><br>Ayudado de vuestra divina gracia,<br>propongo firmemente nunca más pecar,<br>confesarme y cumplir la penitencia que me fuere impuesta.<br><br><strong>Amén.</strong></p>' },
+      san_miguel: { title: "Oración a San Miguel Arcángel", subtitle: "Defensa contra el mal", content: '<p><strong>San Miguel Arcángel,</strong><br>defiéndenos en la batalla.<br>Sé nuestro amparo contra la perversidad<br>y asechanzas del demonio.<br><br>Reprímale Dios, pedimos suplicantes,<br>y tú, Príncipe de la Milicia Celestial,<br>arroja al infierno con el divino poder<br>a Satanás y a los otros espíritus malignos<br>que andan dispersos por el mundo<br>para la perdición de las almas.<br><br><strong>Amén.</strong></p>' },
+      magnificat: { title: "Magnificat", subtitle: "Cántico de María (Lucas 1:46-55)", content: '<p><strong>Proclama mi alma la grandeza del Señor,</strong><br>se alegra mi espíritu en Dios, mi salvador;<br>porque ha mirado la humillación de su esclava.<br><br>Desde ahora me felicitarán todas las generaciones,<br>porque el Poderoso ha hecho obras grandes por mí:<br>su nombre es santo,<br>y su misericordia llega a sus fieles<br>de generación en generación.<br><br>Él hace proezas con su brazo:<br>dispersa a los soberbios de corazón,<br>derriba del trono a los poderosos<br>y enaltece a los humildes,<br>a los hambrientos los colma de bienes<br>y a los ricos los despide vacíos.<br><br>Auxilia a Israel, su siervo,<br>acordándose de la misericordia<br>—como lo había prometido a nuestros padres—<br>en favor de Abrahán y su descendencia por siempre.<br><br><strong>Gloria al Padre, y al Hijo, y al Espíritu Santo...</strong></p>' },
+      salve: { title: "Salve Regina", subtitle: "Antífona Mariana", content: '<p><strong>Dios te salve, Reina y Madre de misericordia,</strong><br>vida, dulzura y esperanza nuestra;<br>Dios te salve.<br><br>A ti llamamos los desterrados hijos de Eva;<br>a ti suspiramos, gimiendo y llorando<br>en este valle de lágrimas.<br><br>Ea, pues, Señora, abogada nuestra,<br>vuelve a nosotros esos tus ojos misericordiosos;<br>y después de este destierro,<br>muéstranos a Jesús, fruto bendito de tu vientre.<br><br>¡Oh clementísima, oh piadosa,<br>oh dulce Virgen María!<br><br><strong>V.</strong> Ruega por nosotros, Santa Madre de Dios.<br><strong>R.</strong> Para que seamos dignos de alcanzar las promesas de Cristo.<br><br><strong>Amén.</strong></p>' },
+      sub_tuum: { title: "Sub Tuum Praesidium", subtitle: "Bajo tu amparo (siglo III)", content: '<p><strong>Bajo tu amparo nos acogemos,</strong><br>Santa Madre de Dios;<br>no deseches las súplicas<br>que te dirigimos en nuestras necesidades,<br>antes bien, líbranos de todo peligro,<br>¡oh Virgen gloriosa y bendita!<br><br><em>Sub tuum praesidium confugimus,<br>Sancta Dei Genetrix.<br>Nostras deprecationes ne despicias<br>in necessitatibus,<br>sed a periculis cunctis<br>libera nos semper,<br>Virgo gloriosa et benedicta.</em><br><br><strong>Amén.</strong></p>' },
+      requiem: { title: "Oración por los Difuntos", subtitle: "Réquiem Aetérnam", content: '<p><strong>Dales, Señor, el descanso eterno,</strong><br>y brille para ellos la luz perpetua.<br>Descansen en paz.<br><br><em>Réquiem ætérnam dona eis, Dómine,<br>et lux perpétua lúceat eis.<br>Requiéscant in pace.</em><br><br><strong>Amén.</strong></p>' },
+      ven_espiritu: { title: "Ven, Espíritu Santo", subtitle: "Invocación al Paráclito", content: '<p><strong>Ven, Espíritu Santo,</strong><br>llena los corazones de tus fieles<br>y enciende en ellos el fuego de tu amor.<br><br><strong>V.</strong> Envía tu Espíritu y serán creados.<br><strong>R.</strong> Y renovarás la faz de la tierra.<br><br><strong>Oremos:</strong><br>Oh Dios, que has instruido los corazones de tus fieles<br>con la luz del Espíritu Santo,<br>concédenos que sintamos rectamente con el mismo Espíritu<br>y gocemos siempre de su divino consuelo.<br>Por Jesucristo Nuestro Señor.<br><br><strong>Amén.</strong></p>' },
+      anima_christi: { title: "Anima Christi", subtitle: "Alma de Cristo", content: '<p><strong>Alma de Cristo, santifícame.</strong><br>Cuerpo de Cristo, sálvame.<br>Sangre de Cristo, embriágame.<br>Agua del costado de Cristo, lávame.<br>Pasión de Cristo, confórtame.<br><br>Oh buen Jesús, óyeme.<br>Dentro de tus llagas, escóndeme.<br>No permitas que me aparte de Ti.<br>Del enemigo, defiéndeme.<br>En la hora de mi muerte, llámame.<br>Y mándame ir a Ti,<br>para que con tus Santos te alabe<br>por los siglos de los siglos.<br><br><strong>Amén.</strong></p>' },
+      divine_mercy: { title: "Coronilla de la Divina Misericordia", subtitle: "", content: '<h4>En las cuentas del Padre Nuestro:</h4><p><strong>Padre Eterno, te ofrezco el Cuerpo y la Sangre, el Alma y la Divinidad de tu Amadísimo Hijo, nuestro Señor Jesucristo, como propiciación de nuestros pecados y los del mundo entero.</strong></p><h4>En las cuentas del Ave María (10 veces):</h4><p><strong>Por Su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.</strong></p><h4>Al final (3 veces):</h4><p><strong>Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.</strong></p>' },
+      litany_saints: { title: "Litaniae Sanctorum", subtitle: "Letanía de los Santos", content: '<div class="litany-section"><h4>Invocationes</h4><div class="litany-line"><span class="litany-call">Kyrie, eleison</span><span class="litany-response">Kyrie, eleison</span></div><div class="litany-line"><span class="litany-call">Christe, eleison</span><span class="litany-response">Christe, eleison</span></div><div class="litany-line"><span class="litany-call">Kyrie, eleison</span><span class="litany-response">Kyrie, eleison</span></div></div><div class="litany-section"><h4>Sancta Maria</h4><div class="litany-line"><span class="litany-call">Sancta Maria, Mater Dei</span><span class="litany-response">ora pro nobis</span></div><div class="litany-line"><span class="litany-call">Sancte Michael</span><span class="litany-response">ora pro nobis</span></div><div class="litany-line"><span class="litany-call">Sancte Ioseph</span><span class="litany-response">ora pro nobis</span></div></div><div class="litany-section"><h4>Apostoli</h4><div class="litany-line"><span class="litany-call">Sancte Petre et Paule</span><span class="litany-response">orate pro nobis</span></div><div class="litany-line"><span class="litany-call">Omnes Sancti Apostoli</span><span class="litany-response">orate pro nobis</span></div></div><div class="litany-section"><h4>Sancti et Sanctae</h4><div class="litany-line"><span class="litany-call">Sancta Maria Magdalena</span><span class="litany-response">ora pro nobis</span></div><div class="litany-line"><span class="litany-call">Sancte Augustine</span><span class="litany-response">ora pro nobis</span></div><div class="litany-line"><span class="litany-call">Sancte Francisce</span><span class="litany-response">ora pro nobis</span></div><div class="litany-line"><span class="litany-call">Sancta Teresia</span><span class="litany-response">ora pro nobis</span></div><div class="litany-line"><span class="litany-call">Omnes Sancti et Sanctae Dei</span><span class="litany-response">orate pro nobis</span></div></div><div class="litany-section"><p><strong>Agnus Dei, qui tollis peccata mundi,</strong> <span class="litany-response">parce nobis, Domine.</span><br><strong>Agnus Dei, qui tollis peccata mundi,</strong> <span class="litany-response">exaudi nos, Domine.</span><br><strong>Agnus Dei, qui tollis peccata mundi,</strong> <span class="litany-response">miserere nobis.</span></p></div>' },
+      rosary_joyful: { title: "Misterios Gozosos", subtitle: "Lunes y Sábado", isRosary: true, mysteryType: 'joyful' },
+      rosary_sorrowful: { title: "Misterios Dolorosos", subtitle: "Martes y Viernes", isRosary: true, mysteryType: 'sorrowful' },
+      rosary_glorious: { title: "Misterios Gloriosos", subtitle: "Miércoles y Domingo", isRosary: true, mysteryType: 'glorious' },
+      rosary_luminous: { title: "Misterios Luminosos", subtitle: "Jueves", isRosary: true, mysteryType: 'luminous' }
     };
     
-    // 2026 CALENDAR
+    // 2026 CALENDAR WITH FEASTS
     var MONTHS = [
-      { name: 'Enero', theme: 'Nombre de Jesús', scripture: '"Al nombre de Jesús toda rodilla se doble."', ref: 'Filipenses 2:10', feasts: [{ date: '1', name: 'Santa María, Madre de Dios', solemnity: true }, { date: '6', name: 'Epifanía', solemnity: true }]},
-      { name: 'Febrero', theme: 'Conversión', scripture: '"Conviértanse y crean en el Evangelio."', ref: 'Marcos 1:15', feasts: [{ date: '2', name: 'Presentación del Señor' }, { date: '18', name: 'Miércoles de Ceniza', solemnity: true }]},
-      { name: 'Marzo', theme: 'Cuaresma', scripture: '"Niéguese a sí mismo."', ref: 'Mateo 16:24', feasts: [{ date: '19', name: 'San José', solemnity: true }, { date: '25', name: 'Anunciación', solemnity: true }, { date: '29', name: 'Ramos', solemnity: true }]},
-      { name: 'Abril', theme: 'Pascua', scripture: '"¡Ha resucitado!"', ref: 'Mateo 28:6', feasts: [{ date: '2', name: 'Jueves Santo', solemnity: true }, { date: '3', name: 'Viernes Santo', solemnity: true }, { date: '5', name: 'Pascua', solemnity: true }]},
-      { name: 'Mayo', theme: 'Mes de María', scripture: '"Hágase en mí según tu palabra."', ref: 'Lucas 1:38', feasts: [{ date: '13', name: 'Fátima' }, { date: '14', name: 'Ascensión', solemnity: true }, { date: '24', name: 'Pentecostés', solemnity: true }]},
-      { name: 'Junio', theme: 'Sagrado Corazón', scripture: '"Vengan a mí todos los que están cansados."', ref: 'Mateo 11:28', feasts: [{ date: '7', name: 'Corpus Christi', solemnity: true }, { date: '12', name: 'Sagrado Corazón', solemnity: true }]},
-      { name: 'Julio', theme: 'Presencia de Dios', scripture: '"Permanezcan en mí."', ref: 'Juan 15:4', feasts: [{ date: '16', name: 'Virgen del Carmen' }, { date: '22', name: 'María Magdalena' }]},
-      { name: 'Agosto', theme: 'Asunción', scripture: '"Engrandece mi alma al Señor."', ref: 'Lucas 1:46', feasts: [{ date: '6', name: 'Transfiguración' }, { date: '15', name: 'Asunción', solemnity: true }]},
-      { name: 'Septiembre', theme: 'Dolores de María', scripture: '"Junto a la cruz estaba su madre."', ref: 'Juan 19:25', feasts: [{ date: '8', name: 'Natividad de María' }, { date: '14', name: 'Exaltación de la Cruz' }]},
-      { name: 'Octubre', theme: 'Santo Rosario', scripture: '"Dios te salve, llena de gracia."', ref: 'Lucas 1:28', feasts: [{ date: '4', name: 'San Francisco' }, { date: '7', name: 'Virgen del Rosario' }]},
-      { name: 'Noviembre', theme: 'Comunión de Santos', scripture: '"Bienaventurados los que lloran."', ref: 'Mateo 5:4', feasts: [{ date: '1', name: 'Todos los Santos', solemnity: true }, { date: '2', name: 'Fieles Difuntos' }, { date: '22', name: 'Cristo Rey', solemnity: true }]},
-      { name: 'Diciembre', theme: 'Adviento y Navidad', scripture: '"El Verbo se hizo carne."', ref: 'Juan 1:14', feasts: [{ date: '8', name: 'Inmaculada', solemnity: true }, { date: '12', name: 'Guadalupe' }, { date: '25', name: 'Navidad', solemnity: true }]}
+      { name: 'Enero', theme: 'Nombre de Jesús', scripture: '"Al nombre de Jesús toda rodilla se doble."', ref: 'Filipenses 2:10', feasts: [{ date: 1, name: 'Santa María, Madre de Dios' }, { date: 6, name: 'Epifanía del Señor' }]},
+      { name: 'Febrero', theme: 'Conversión', scripture: '"Conviértanse y crean en el Evangelio."', ref: 'Marcos 1:15', feasts: [{ date: 2, name: 'Presentación del Señor' }, { date: 11, name: 'Nuestra Señora de Lourdes' }, { date: 18, name: 'Miércoles de Ceniza' }]},
+      { name: 'Marzo', theme: 'Cuaresma', scripture: '"Niéguese a sí mismo y tome su cruz."', ref: 'Mateo 16:24', feasts: [{ date: 19, name: 'San José' }, { date: 25, name: 'Anunciación del Señor' }, { date: 29, name: 'Domingo de Ramos' }]},
+      { name: 'Abril', theme: 'Pascua', scripture: '"¡Ha resucitado!"', ref: 'Mateo 28:6', feasts: [{ date: 2, name: 'Jueves Santo' }, { date: 3, name: 'Viernes Santo' }, { date: 5, name: 'Domingo de Pascua' }]},
+      { name: 'Mayo', theme: 'Mes de María', scripture: '"Hágase en mí según tu palabra."', ref: 'Lucas 1:38', feasts: [{ date: 1, name: 'San José Obrero' }, { date: 13, name: 'Nuestra Señora de Fátima' }, { date: 24, name: 'Pentecostés' }, { date: 31, name: 'Visitación de María' }]},
+      { name: 'Junio', theme: 'Sagrado Corazón', scripture: '"Vengan a mí todos los que están cansados."', ref: 'Mateo 11:28', feasts: [{ date: 7, name: 'Corpus Christi' }, { date: 12, name: 'Sagrado Corazón de Jesús' }, { date: 24, name: 'Natividad de San Juan Bautista' }]},
+      { name: 'Julio', theme: 'Presencia de Dios', scripture: '"Permanezcan en mí."', ref: 'Juan 15:4', feasts: [{ date: 16, name: 'Virgen del Carmen' }, { date: 22, name: 'Santa María Magdalena' }, { date: 25, name: 'Santiago Apóstol' }]},
+      { name: 'Agosto', theme: 'Asunción', scripture: '"Engrandece mi alma al Señor."', ref: 'Lucas 1:46', feasts: [{ date: 6, name: 'Transfiguración del Señor' }, { date: 15, name: 'Asunción de María' }]},
+      { name: 'Septiembre', theme: 'Dolores de María', scripture: '"Junto a la cruz estaba su madre."', ref: 'Juan 19:25', feasts: [{ date: 8, name: 'Natividad de María' }, { date: 14, name: 'Exaltación de la Santa Cruz' }, { date: 15, name: 'Nuestra Señora de los Dolores' }]},
+      { name: 'Octubre', theme: 'Santo Rosario', scripture: '"Dios te salve, llena de gracia."', ref: 'Lucas 1:28', feasts: [{ date: 4, name: 'San Francisco de Asís' }, { date: 7, name: 'Nuestra Señora del Rosario' }, { date: 15, name: 'Santa Teresa de Jesús' }]},
+      { name: 'Noviembre', theme: 'Comunión de Santos', scripture: '"Bienaventurados los que lloran."', ref: 'Mateo 5:4', feasts: [{ date: 1, name: 'Todos los Santos' }, { date: 2, name: 'Fieles Difuntos' }, { date: 22, name: 'Cristo Rey' }]},
+      { name: 'Diciembre', theme: 'Adviento y Navidad', scripture: '"El Verbo se hizo carne."', ref: 'Juan 1:14', feasts: [{ date: 8, name: 'Inmaculada Concepción' }, { date: 12, name: 'Nuestra Señora de Guadalupe' }, { date: 25, name: 'Navidad del Señor' }]}
     ];
     
     var GOAL_CATEGORIES = [
-      { id: 'spiritual', title: '🕊️ Vida Espiritual', color: '#9B59B6' },
-      { id: 'family', title: '💖 Familia y Relaciones', color: '#E85D4C' },
-      { id: 'personal', title: '🌿 Personal y Emocional', color: '#2A9D8F' }
+      { id: 'spiritual', title: '🕊️ Vida Espiritual' },
+      { id: 'family', title: '💖 Familia y Relaciones' },
+      { id: 'personal', title: '🌿 Personal y Emocional' }
     ];
     
-    var data = { lectios: [], intentions: [], monthlyGoals: {}, readChapters: [], currentMonth: new Date().getMonth() };
+    // DATA
+    var data = { 
+      lectios: [], intentions: [], monthlyGoals: {}, readChapters: [], 
+      currentMonth: 0, // START IN JANUARY
+      dailyPrayers: {}, rosaryProgress: {}, journal: [], prayerHistory: []
+    };
     var currentTab = 'lectio';
     var expandedCard = null;
     var selectedReadingType = 'random';
     var pendingReading = null;
-    var currentPrayer = 'rosary_joyful';
+    var currentPrayer = 'padre_nuestro';
     
     function init() {
-      var saved = localStorage.getItem('spiritual-planner-v7');
+      var saved = localStorage.getItem('spiritual-planner-v10');
       if (saved) { 
         data = JSON.parse(saved); 
         if (!data.readChapters) data.readChapters = []; 
         if (!data.monthlyGoals) data.monthlyGoals = {};
+        if (!data.dailyPrayers) data.dailyPrayers = {};
+        if (!data.rosaryProgress) data.rosaryProgress = {};
+        if (!data.journal) data.journal = [];
+        if (!data.prayerHistory) data.prayerHistory = [];
+        if (data.currentMonth === undefined) data.currentMonth = 0;
       }
+      updateTodayHeader();
       populateBookSelect();
       render();
     }
     
-    function save() { localStorage.setItem('spiritual-planner-v7', JSON.stringify(data)); }
+    function save() { localStorage.setItem('spiritual-planner-v10', JSON.stringify(data)); }
+    
+    function getTodayKey() { return new Date().toISOString().slice(0, 10); }
+    
+    function formatDateLong(date) {
+      var days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+      var months = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+      return days[date.getDay()] + ', ' + date.getDate() + ' de ' + months[date.getMonth()] + ' de ' + date.getFullYear();
+    }
+    
+    function updateTodayHeader() {
+      var today = new Date();
+      document.getElementById('todayDate').textContent = formatDateLong(today);
+      var month = MONTHS[today.getMonth()];
+      var todayFeast = month.feasts.find(function(f) { return f.date === today.getDate(); });
+      document.getElementById('todayFeast').textContent = todayFeast ? '✨ ' + todayFeast.name : '📿 ' + month.theme;
+    }
     
     function showStatus(msg, type) {
       var el = document.getElementById('statusMsg');
       el.textContent = msg; el.className = 'status-msg ' + type; el.style.display = 'block';
-      if (type !== 'info') setTimeout(function() { el.style.display = 'none'; }, 3000);
+      setTimeout(function() { el.style.display = 'none'; }, 3000);
     }
     
-    function togglePrayer() {
-      prayerExpanded = !prayerExpanded;
-      var textEl = document.getElementById('prayerText');
-      var btnEl = document.querySelector('.prayer-toggle');
-      if (prayerExpanded) {
-        textEl.innerHTML = '<p>' + fullPrayer.replace(/\n\n/g, '</p><p style="margin-top:12px;">').replace(/\n/g, '<br>') + '</p>';
-        btnEl.textContent = 'Ver menos ▲';
-      } else {
-        textEl.innerHTML = '<p>Madre Santísima, Señora de mi corazón,<br>hoy me pongo bajo Tu manto de amor y protección.<br>Te entrego mi día, con todo lo que trae:<br>mis alegrías, mis desafíos, mis miedos y mis esperanzas.</p>';
-        btnEl.textContent = 'Ver oración completa ▼';
+    function getBookProgress(bookAbbr) {
+      var book = BIBLE_BOOKS.find(function(b) { return b.abbr === bookAbbr; });
+      if (!book) return 0;
+      var read = 0;
+      for (var ch = 1; ch <= book.chapters; ch++) {
+        if (data.readChapters.indexOf(bookAbbr + '-' + ch) !== -1) read++;
       }
+      return Math.round((read / book.chapters) * 100);
     }
     
     function populateBookSelect() {
       var select = document.getElementById('bookSelect');
-      var otBooks = BIBLE_BOOKS.filter(function(b) { return b.type === 'ot'; });
-      var psalmBooks = BIBLE_BOOKS.filter(function(b) { return b.type === 'psalm'; });
-      var gospelBooks = BIBLE_BOOKS.filter(function(b) { return b.type === 'gospel'; });
-      var epistleBooks = BIBLE_BOOKS.filter(function(b) { return b.type === 'epistle'; });
-      
-      select.innerHTML = 
-        '<optgroup label="📕 Pentateuco">' + otBooks.slice(0,5).map(function(b) { return '<option value="' + b.abbr + '">' + b.name + '</option>'; }).join('') + '</optgroup>' +
-        '<optgroup label="📗 Históricos">' + otBooks.slice(5,21).map(function(b) { return '<option value="' + b.abbr + '">' + b.name + '</option>'; }).join('') + '</optgroup>' +
-        '<optgroup label="📘 Sapienciales">' + otBooks.slice(21,27).map(function(b) { return '<option value="' + b.abbr + '">' + b.name + '</option>'; }).join('') + psalmBooks.map(function(b) { return '<option value="' + b.abbr + '">' + b.name + '</option>'; }).join('') + '</optgroup>' +
-        '<optgroup label="📙 Profetas">' + otBooks.slice(27).map(function(b) { return '<option value="' + b.abbr + '">' + b.name + '</option>'; }).join('') + '</optgroup>' +
-        '<optgroup label="✝️ Evangelios">' + gospelBooks.map(function(b) { return '<option value="' + b.abbr + '">' + b.name + '</option>'; }).join('') + '</optgroup>' +
-        '<optgroup label="✉️ Hechos y Cartas">' + epistleBooks.map(function(b) { return '<option value="' + b.abbr + '">' + b.name + '</option>'; }).join('') + '</optgroup>';
+      if (!select) return;
+      select.innerHTML = BIBLE_BOOKS.map(function(b) { return '<option value="' + b.abbr + '">' + b.name + '</option>'; }).join('');
       updateChapters();
     }
     
     function updateChapters() {
       var bookAbbr = document.getElementById('bookSelect').value;
       var book = BIBLE_BOOKS.find(function(b) { return b.abbr === bookAbbr; });
+      if (!book) return;
       var select = document.getElementById('chapterSelect');
       var options = [];
       for (var ch = 1; ch <= book.chapters; ch++) {
@@ -524,30 +589,15 @@
       select.innerHTML = options.join('');
     }
     
-    function getAllReadings(filter) {
-      var readings = [];
+    function getRandomUnreadChapter(filter) {
+      var candidates = [];
       BIBLE_BOOKS.forEach(function(book) {
         if (filter && book.type !== filter) return;
         for (var ch = 1; ch <= book.chapters; ch++) {
           var key = book.abbr + '-' + ch;
-          if (data.readChapters.indexOf(key) === -1) readings.push({ book: book, chapter: ch, key: key });
+          if (data.readChapters.indexOf(key) === -1) candidates.push({ book: book, chapter: ch, key: key });
         }
       });
-      return readings;
-    }
-    
-    function getRandomUnreadChapter(filter) {
-      var candidates = getAllReadings(filter);
-      if (candidates.length === 0) {
-        // Reset read chapters for this filter
-        data.readChapters = data.readChapters.filter(function(k) {
-          var abbr = k.split('-')[0];
-          var book = BIBLE_BOOKS.find(function(b) { return b.abbr === abbr; });
-          return book && filter && book.type !== filter;
-        });
-        save();
-        candidates = getAllReadings(filter);
-      }
       if (candidates.length === 0) return null;
       return candidates[Math.floor(Math.random() * candidates.length)];
     }
@@ -567,19 +617,9 @@
         var filter = type === 'random' ? null : type;
         var reading = getRandomUnreadChapter(filter);
         pendingReading = reading;
-        if (reading) {
-          selectedDiv.style.display = 'block';
-          document.getElementById('selectedReadingText').textContent = reading.book.name + ' ' + reading.chapter;
-        } else {
-          selectedDiv.style.display = 'block';
-          document.getElementById('selectedReadingText').textContent = '¡Has leído todo! Selecciona manualmente.';
-        }
+        selectedDiv.style.display = 'block';
+        document.getElementById('selectedReadingText').textContent = reading ? reading.book.name + ' ' + reading.chapter : '¡Todo leído!';
       }
-    }
-    
-    function formatScripture(text) {
-      if (!text) return '<p style="color:#6b7280;font-style:italic;">Lee este capítulo en tu Biblia física o aplicación de Biblia Católica.</p>';
-      return text.replace(/(\d+)\s/g, '<span class="verse-num">$1</span> ');
     }
     
     function startLectio() {
@@ -592,29 +632,32 @@
       } else {
         reading = pendingReading;
       }
-      if (!reading) { alert('Por favor selecciona una lectura'); return; }
+      if (!reading) { alert('Selecciona una lectura'); return; }
       
       if (data.readChapters.indexOf(reading.key) === -1) data.readChapters.push(reading.key);
       
-      var scriptureText = BIBLE_TEXT[reading.book.abbr + '-' + reading.chapter] || null;
-      
-      var today = new Date().toISOString().slice(0, 10);
       data.lectios.push({
-        id: Date.now(),
-        date: today,
-        timestamp: new Date().toISOString(),
-        bookAbbr: reading.book.abbr,
-        bookName: reading.book.name,
-        chapter: reading.chapter,
-        reference: reading.book.name + ' ' + reading.chapter,
-        scriptureText: scriptureText,
+        id: Date.now(), date: getTodayKey(), timestamp: new Date().toISOString(),
+        bookAbbr: reading.book.abbr, bookName: reading.book.name, usccb: reading.book.usccb,
+        chapter: reading.chapter, reference: reading.book.name + ' ' + reading.chapter,
         lectio: '', meditatio: '', oratio: '', contemplatio: ''
       });
       
-      save();
-      closeModal('lectioModal');
+      logPrayer('Lectio Divina: ' + reading.book.name + ' ' + reading.chapter);
+      save(); closeModal('lectioModal');
       expandedCard = 'lectio-' + data.lectios[data.lectios.length - 1].id;
       render();
+    }
+    
+    function logPrayer(prayerName) {
+      var now = new Date();
+      data.prayerHistory.push({
+        date: getTodayKey(),
+        time: now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' }),
+        prayer: prayerName,
+        timestamp: now.toISOString()
+      });
+      save();
     }
     
     function getStreak() {
@@ -630,8 +673,7 @@
     }
     
     function getTodayLectios() {
-      var today = new Date().toISOString().slice(0, 10);
-      return data.lectios.filter(function(l) { return l.date === today; });
+      return data.lectios.filter(function(l) { return l.date === getTodayKey(); });
     }
     
     function getTotalChapters() {
@@ -642,12 +684,11 @@
       var streak = getStreak();
       var totalChapters = getTotalChapters();
       var progress = Math.round((data.readChapters.length / totalChapters) * 100);
-      var answered = data.intentions.filter(function(i) { return i.answered; }).length;
       document.getElementById('dashboard').innerHTML = 
         '<div class="stat"><div class="stat-num" style="color:#E85D4C;">♥ ' + streak + '</div><div class="stat-label">Días Seguidos</div></div>' +
-        '<div class="stat"><div class="stat-num" style="color:#F4C430;">' + getTodayLectios().length + '</div><div class="stat-label">Hoy</div></div>' +
-        '<div class="stat"><div class="stat-num" style="color:#2A9D8F;">' + progress + '%</div><div class="stat-label">' + data.readChapters.length + '/' + totalChapters + '</div><div class="progress-bar"><div class="progress-fill" style="width:' + progress + '%;"></div></div></div>' +
-        '<div class="stat"><div class="stat-num" style="color:#6B8EAE;">' + answered + '/' + data.intentions.length + '</div><div class="stat-label">Intenciones</div></div>';
+        '<div class="stat"><div class="stat-num" style="color:#F4C430;">' + getTodayLectios().length + '</div><div class="stat-label">Lectio Hoy</div></div>' +
+        '<div class="stat"><div class="stat-num" style="color:#2A9D8F;">' + progress + '%</div><div class="stat-label">Biblia</div><div class="progress-bar"><div class="progress-fill" style="width:' + progress + '%;"></div></div></div>' +
+        '<div class="stat"><div class="stat-num" style="color:#6B8EAE;">' + data.journal.length + '</div><div class="stat-label">Diario</div></div>';
     }
     
     function renderTabs() {
@@ -655,7 +696,10 @@
         { id: 'lectio', label: '📖 Lectio' },
         { id: 'prayers', label: '🙏 Oraciones' },
         { id: 'intentions', label: '💝 Intenciones' },
-        { id: 'month', label: '📅 ' + MONTHS[data.currentMonth].name }
+        { id: 'journal', label: '📝 Diario' },
+        { id: 'bible', label: '📚 Biblia' },
+        { id: 'history', label: '📊 Historial' },
+        { id: 'month', label: '📅 Calendario' }
       ];
       document.getElementById('tabs').innerHTML = tabs.map(function(t) {
         return '<button class="tab ' + (currentTab === t.id ? 'active' : '') + '" onclick="setTab(\'' + t.id + '\')">' + t.label + '</button>';
@@ -671,41 +715,54 @@
       if (currentTab === 'lectio') content.innerHTML = renderLectioTab();
       else if (currentTab === 'prayers') content.innerHTML = renderPrayersTab();
       else if (currentTab === 'intentions') content.innerHTML = renderIntentionsTab();
+      else if (currentTab === 'journal') content.innerHTML = renderJournalTab();
+      else if (currentTab === 'bible') content.innerHTML = renderBibleTab();
+      else if (currentTab === 'history') content.innerHTML = renderHistoryTab();
       else if (currentTab === 'month') content.innerHTML = renderMonthTab();
     }
     
     function renderLectioTab() {
-      var todayLectios = getTodayLectios();
       var html = '<div style="text-align:center;margin-bottom:16px;"><button class="btn btn-primary" onclick="openLectioModal()">📖 Nueva Lectio Divina</button></div>';
-      html += '<div class="scripture-box"><p class="scripture-quote">"Habla, Señor, que tu siervo escucha."</p><p class="scripture-ref">1 Samuel 3:10</p></div>';
       
-      if (todayLectios.length > 0) {
-        html += '<div class="today-lectios"><div class="today-lectios-title">📅 Lecturas de Hoy (' + todayLectios.length + ')</div>' +
-          todayLectios.map(function(l) { return '<div class="today-lectio-item">• ' + l.reference + '</div>'; }).join('') + '</div>';
-      }
+      // Daily Prayer Tracker with Date
+      var today = new Date();
+      html += '<div class="daily-prayers-tracker"><div class="daily-prayers-title">✨ Oraciones de Hoy</div><div class="daily-prayers-date">' + formatDateLong(today) + '</div>';
+      
+      var prayers = [
+        { id: 'lectio', name: 'Lectio Divina', done: getTodayLectios().length > 0 },
+        { id: 'rosary', name: 'Santo Rosario' },
+        { id: 'coronilla', name: 'Coronilla de la Divina Misericordia' },
+        { id: 'liturgia', name: 'Liturgia de las Horas' },
+        { id: 'examen', name: 'Examen de Conciencia' }
+      ];
+      
+      prayers.forEach(function(p) {
+        var isDone = p.done || (data.dailyPrayers[getTodayKey()] && data.dailyPrayers[getTodayKey()][p.id]);
+        html += '<div class="daily-prayer-item"><div class="daily-prayer-check ' + (isDone ? 'done' : '') + '" onclick="toggleDailyPrayer(\'' + p.id + '\')">' + (isDone ? '✓' : '') + '</div><span class="daily-prayer-label">' + p.name + '</span></div>';
+      });
+      html += '</div>';
       
       var sorted = data.lectios.slice().sort(function(a, b) { return (b.timestamp || b.date).localeCompare(a.timestamp || a.date); });
       if (sorted.length === 0) {
-        html += '<div class="empty-state">Aún no tienes entradas de Lectio Divina.<br>¡Comienza tu encuentro diario con la Palabra de Dios!</div>';
+        html += '<div class="empty-state">Aún no tienes entradas de Lectio Divina.</div>';
       } else {
-        html += sorted.map(function(l) {
+        html += sorted.slice(0, 10).map(function(l) {
           var isExp = expandedCard === 'lectio-' + l.id;
           var dateObj = new Date(l.date + 'T12:00:00');
-          var dateStr = dateObj.toLocaleDateString('es-ES', { weekday: 'short', day: 'numeric', month: 'short' });
-          var isToday = l.date === new Date().toISOString().slice(0, 10);
+          var dateStr = dateObj.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+          var usccbEs = 'https://bible.usccb.org/es/bible/' + l.usccb + '/' + l.chapter;
+          var usccbEn = 'https://bible.usccb.org/bible/' + l.usccb + '/' + l.chapter;
           
           return '<div class="card lectio-card ' + (isExp ? 'expanded' : '') + '">' +
             '<div class="card-header" onclick="toggleCard(\'lectio-' + l.id + '\')">' + chevronSVG +
-              '<div style="flex:1;"><div class="lectio-date">' + dateStr + '</div><div class="lectio-reading">📜 ' + l.reference + '</div></div>' +
-              (isToday ? '<span style="background:#FFF3CD;color:#856404;padding:4px 8px;border-radius:12px;font-size:11px;">Hoy</span>' : '') +
-            '</div>' +
+              '<div style="flex:1;"><div class="lectio-date">' + dateStr + '</div><div class="lectio-reading">📜 ' + l.reference + '</div></div></div>' +
             '<div class="card-body">' +
-              '<div class="scripture-display"><div class="scripture-reference">📖 ' + l.reference + '</div><div class="scripture-text">' + formatScripture(l.scriptureText) + '</div></div>' +
-              '<div class="lectio-section"><div class="lectio-section-title">📖 1. Lectio</div><textarea class="lectio-textarea" placeholder="¿Qué palabras te llaman la atención?" onchange="updateLectio(' + l.id + ', \'lectio\', this.value)">' + escapeHtml(l.lectio || '') + '</textarea></div>' +
-              '<div class="lectio-section"><div class="lectio-section-title">💭 2. Meditatio</div><textarea class="lectio-textarea" placeholder="¿Qué me dice el Señor?" onchange="updateLectio(' + l.id + ', \'meditatio\', this.value)">' + escapeHtml(l.meditatio || '') + '</textarea></div>' +
-              '<div class="lectio-section"><div class="lectio-section-title">🙏 3. Oratio</div><textarea class="lectio-textarea" placeholder="Tu respuesta en oración..." onchange="updateLectio(' + l.id + ', \'oratio\', this.value)">' + escapeHtml(l.oratio || '') + '</textarea></div>' +
-              '<div class="lectio-section"><div class="lectio-section-title">🌸 4. Contemplatio</div><textarea class="lectio-textarea" placeholder="Descansa en silencio..." onchange="updateLectio(' + l.id + ', \'contemplatio\', this.value)">' + escapeHtml(l.contemplatio || '') + '</textarea></div>' +
-              '<div style="text-align:right;margin-top:12px;"><button class="btn btn-danger btn-small" onclick="deleteLectio(' + l.id + '); event.stopPropagation();">Eliminar</button></div>' +
+              '<div class="scripture-display"><div class="scripture-reference">📖 ' + l.reference + '</div><a href="' + usccbEs + '" target="_blank" class="scripture-link">🇪🇸 Leer en Español</a><a href="' + usccbEn + '" target="_blank" class="scripture-link" style="background:#6B8EAE;">🇺🇸 Read in English</a></div>' +
+              '<div class="lectio-section"><div class="lectio-section-title">📖 1. Lectio — ¿Qué dice el texto?</div><textarea class="lectio-textarea" placeholder="¿Qué palabras o frases te llaman la atención?" onchange="updateLectio(' + l.id + ', \'lectio\', this.value)">' + escapeHtml(l.lectio || '') + '</textarea></div>' +
+              '<div class="lectio-section"><div class="lectio-section-title">💭 2. Meditatio — ¿Qué me dice a mí?</div><textarea class="lectio-textarea" placeholder="¿Qué me dice el Señor personalmente?" onchange="updateLectio(' + l.id + ', \'meditatio\', this.value)">' + escapeHtml(l.meditatio || '') + '</textarea></div>' +
+              '<div class="lectio-section"><div class="lectio-section-title">🙏 3. Oratio — Mi respuesta a Dios</div><textarea class="lectio-textarea" placeholder="Tu oración en respuesta a la Palabra..." onchange="updateLectio(' + l.id + ', \'oratio\', this.value)">' + escapeHtml(l.oratio || '') + '</textarea></div>' +
+              '<div class="lectio-section"><div class="lectio-section-title">🌸 4. Contemplatio — Descansar en Dios</div><textarea class="lectio-textarea" placeholder="Simplemente estar con Dios en silencio..." onchange="updateLectio(' + l.id + ', \'contemplatio\', this.value)">' + escapeHtml(l.contemplatio || '') + '</textarea></div>' +
+              '<div style="text-align:right;margin-top:12px;"><button class="btn btn-danger btn-small" onclick="deleteLectio(' + l.id + ')">🗑️ Eliminar</button></div>' +
             '</div></div>';
         }).join('');
       }
@@ -713,31 +770,186 @@
     }
     
     function renderPrayersTab() {
+      var prayerOrder = ['padre_nuestro', 'ave_maria', 'gloria', 'credo', 'acto_contricion', 'san_miguel', 'magnificat', 'salve', 'sub_tuum', 'ven_espiritu', 'anima_christi', 'divine_mercy', 'requiem', 'litany_saints', 'rosary_joyful', 'rosary_sorrowful', 'rosary_glorious', 'rosary_luminous'];
+      
       var html = '<div class="prayer-nav">' +
-        Object.keys(PRAYERS).map(function(key) {
-          var label = key === 'rosary_joyful' ? 'Gozosos' : key === 'rosary_sorrowful' ? 'Dolorosos' : key === 'rosary_glorious' ? 'Gloriosos' : key === 'rosary_luminous' ? 'Luminosos' : key === 'divine_mercy' ? 'Coronilla' : 'Anima';
-          return '<button class="prayer-nav-btn ' + (currentPrayer === key ? 'active' : '') + '" onclick="setPrayer(\'' + key + '\')">' + label + '</button>';
+        prayerOrder.map(function(key) {
+          var labels = { padre_nuestro: 'Padre Nuestro', ave_maria: 'Ave María', gloria: 'Gloria', credo: 'Credo', acto_contricion: 'Contrición', san_miguel: 'San Miguel', magnificat: 'Magnificat', salve: 'Salve', sub_tuum: 'Sub Tuum', ven_espiritu: 'Espíritu Santo', anima_christi: 'Anima Christi', divine_mercy: 'Coronilla', requiem: 'Difuntos', litany_saints: 'Letanía', rosary_joyful: 'Gozosos', rosary_sorrowful: 'Dolorosos', rosary_glorious: 'Gloriosos', rosary_luminous: 'Luminosos' };
+          return '<button class="prayer-nav-btn ' + (currentPrayer === key ? 'active' : '') + '" onclick="setPrayer(\'' + key + '\')">' + labels[key] + '</button>';
         }).join('') + '</div>';
+      
       var prayer = PRAYERS[currentPrayer];
-      html += '<div class="card prayer-card expanded"><div class="card-body" style="display:block;"><div class="prayer-title">' + prayer.title + '</div><div class="prayer-subtitle">' + prayer.subtitle + '</div><div class="prayer-content" style="margin-top:16px;">' + prayer.content + '</div></div></div>';
+      
+      if (prayer.isRosary) {
+        html += renderRosaryMysteries(prayer.mysteryType);
+      } else {
+        html += '<div class="card prayer-card expanded"><div class="card-body" style="display:block;"><div class="prayer-title">' + prayer.title + '</div><div class="prayer-subtitle">' + prayer.subtitle + '</div><div class="prayer-content" style="margin-top:16px;">' + prayer.content + '</div>';
+        html += '<div style="text-align:center;margin-top:20px;"><button class="btn btn-primary" onclick="markPrayerComplete(\'' + prayer.title + '\')">✓ Marcar como Rezado</button></div>';
+        html += '</div></div>';
+      }
       return html;
+    }
+    
+    function renderRosaryMysteries(mysteryType) {
+      var mystery = ROSARY_MYSTERIES[mysteryType];
+      var today = getTodayKey();
+      var rosaryKey = today + '-' + mysteryType;
+      
+      // Initialize rosary progress if not exists
+      if (!data.rosaryProgress[rosaryKey]) {
+        data.rosaryProgress[rosaryKey] = { 
+          intro: [false, false, false, false, false], 
+          decades: [
+            [false,false,false,false,false,false,false,false,false,false,false],
+            [false,false,false,false,false,false,false,false,false,false,false],
+            [false,false,false,false,false,false,false,false,false,false,false],
+            [false,false,false,false,false,false,false,false,false,false,false],
+            [false,false,false,false,false,false,false,false,false,false,false]
+          ]
+        };
+      }
+      var progress = data.rosaryProgress[rosaryKey];
+      
+      // Count completed beads
+      var totalBeads = 5 + 55; // intro + 5 decades of 11 each
+      var doneBeads = progress.intro.filter(function(b) { return b; }).length;
+      progress.decades.forEach(function(d) { doneBeads += d.filter(function(b) { return b; }).length; });
+      var pct = Math.round((doneBeads / totalBeads) * 100);
+      
+      var html = '<div class="rosary-container">';
+      html += '<div class="rosary-title">📿 ' + mystery.name + '</div>';
+      html += '<p style="color:#9ca3af;text-align:center;font-size:12px;margin-bottom:16px;">' + mystery.day + ' • ' + pct + '% completado</p>';
+      
+      // Intro beads: Cross, Creed, Our Father, 3 Hail Marys, Glory
+      html += '<div style="margin-bottom:20px;"><p style="color:#F4C430;font-size:11px;text-align:center;margin-bottom:8px;">Inicio: Credo, Padre Nuestro, 3 Ave Marías, Gloria</p>';
+      html += '<div class="rosary-beads">';
+      var introLabels = ['✝', 'C', 'PN', 'A', 'A'];
+      for (var i = 0; i < 5; i++) {
+        var isDone = progress.intro[i];
+        html += '<div class="rosary-bead ' + (i === 0 ? 'large ' : '') + (isDone ? 'done' : '') + '" onclick="toggleRosaryBead(\'' + rosaryKey + '\', \'intro\', ' + i + ')">' + (isDone ? '✓' : introLabels[i]) + '</div>';
+      }
+      html += '</div></div>';
+      
+      // Five decades with mysteries
+      for (var d = 0; d < 5; d++) {
+        var m = mystery.mysteries[d];
+        html += '<div style="margin-bottom:20px;">';
+        html += '<div class="prayer-content"><div class="mystery"><div class="mystery-title">' + m.title + '</div><div class="mystery-meditation">' + m.text + '</div><div class="mystery-fruit">Fruto: ' + m.fruit + '</div></div></div>';
+        html += '<div class="rosary-beads">';
+        // Our Father bead (large)
+        html += '<div class="rosary-bead large ' + (progress.decades[d][0] ? 'done' : '') + '" onclick="toggleRosaryBead(\'' + rosaryKey + '\', \'decade\', ' + d + ', 0)">' + (progress.decades[d][0] ? '✓' : 'PN') + '</div>';
+        // 10 Hail Mary beads
+        for (var b = 1; b <= 10; b++) {
+          html += '<div class="rosary-bead ' + (progress.decades[d][b] ? 'done' : '') + '" onclick="toggleRosaryBead(\'' + rosaryKey + '\', \'decade\', ' + d + ', ' + b + ')">' + (progress.decades[d][b] ? '✓' : b) + '</div>';
+        }
+        html += '</div></div>';
+      }
+      
+      // Complete button
+      html += '<div style="text-align:center;margin-top:16px;">';
+      if (pct === 100) {
+        html += '<button class="btn btn-primary" onclick="markPrayerComplete(\'Rosario - ' + mystery.name + '\')">✓ ¡Rosario Completado! Registrar</button>';
+      } else {
+        html += '<p style="color:#9ca3af;font-size:12px;">Completa todas las cuentas para registrar el rosario</p>';
+      }
+      html += '</div></div>';
+      
+      return html;
+    }
+    
+    function toggleRosaryBead(rosaryKey, section, index1, index2) {
+      if (!data.rosaryProgress[rosaryKey]) return;
+      if (section === 'intro') {
+        data.rosaryProgress[rosaryKey].intro[index1] = !data.rosaryProgress[rosaryKey].intro[index1];
+      } else {
+        data.rosaryProgress[rosaryKey].decades[index1][index2] = !data.rosaryProgress[rosaryKey].decades[index1][index2];
+      }
+      save();
+      render();
+    }
+    
+    function markPrayerComplete(prayerName) {
+      logPrayer(prayerName);
+      showStatus('¡' + prayerName + ' registrado!', 'success');
     }
     
     function setPrayer(key) { currentPrayer = key; render(); }
     
     function renderIntentionsTab() {
       var html = '<div style="text-align:center;margin-bottom:16px;"><button class="btn btn-primary" onclick="openModal(\'intentionModal\')">💝 Agregar Intención</button></div>';
+      
       var cats = [{ id: 'family', title: '👨‍👩‍👧 Por mi familia' }, { id: 'spiritual', title: '🕊️ Vida espiritual' }, { id: 'others', title: '🙏 Por otros' }, { id: 'thanksgiving', title: '💛 Acción de Gracias' }];
       cats.forEach(function(cat) {
         var items = data.intentions.filter(function(i) { return i.category === cat.id; });
         if (items.length > 0) {
-          html += '<div class="intention-category"><div class="intention-category-title">' + cat.title + '</div><ul class="intention-list">' +
+          html += '<div class="goal-category"><div class="goal-category-title">' + cat.title + '</div>' +
             items.map(function(i) {
-              return '<li class="intention-item"><div class="intention-check ' + (i.answered ? 'done' : '') + '" onclick="toggleIntention(' + i.id + ')">' + (i.answered ? '✓' : '') + '</div><span class="intention-text" style="' + (i.answered ? 'text-decoration:line-through;color:#9ca3af;' : '') + '">' + escapeHtml(i.text) + '</span><button class="btn btn-danger btn-small" onclick="deleteIntention(' + i.id + '); event.stopPropagation();">×</button></li>';
-            }).join('') + '</ul></div>';
+              return '<div class="intention-item"><div class="intention-check ' + (i.answered ? 'done' : '') + '" onclick="toggleIntention(' + i.id + ')">' + (i.answered ? '✓' : '') + '</div><span style="flex:1;font-size:13px;' + (i.answered ? 'text-decoration:line-through;color:#9ca3af;' : '') + '">' + escapeHtml(i.text) + '</span><button class="btn btn-danger btn-small" onclick="deleteIntention(' + i.id + ')">×</button></div>';
+            }).join('') + '</div>';
         }
       });
-      if (data.intentions.length === 0) html += '<div class="empty-state">"Pidan y se les dará" (Mt 7:7)</div>';
+      if (data.intentions.length === 0) html += '<div class="empty-state">"Pidan y se les dará" — Mateo 7:7</div>';
+      return html;
+    }
+    
+    function renderJournalTab() {
+      var html = '<div style="text-align:center;margin-bottom:16px;"><button class="btn btn-primary" onclick="openModal(\'journalModal\')">📝 Nueva Entrada</button></div>';
+      
+      if (data.journal.length === 0) {
+        html += '<div class="empty-state">Tu diario espiritual está vacío.<br>Comienza a escribir tus reflexiones diarias.</div>';
+      } else {
+        var sorted = data.journal.slice().sort(function(a, b) { return b.timestamp.localeCompare(a.timestamp); });
+        sorted.forEach(function(entry) {
+          var dateObj = new Date(entry.timestamp);
+          html += '<div class="journal-entry"><div class="journal-date">' + formatDateLong(dateObj) + '</div>';
+          if (entry.feeling) html += '<div class="journal-section"><div class="journal-section-title">💭 ¿Cómo me sentí?</div><p style="font-size:14px;">' + escapeHtml(entry.feeling) + '</p></div>';
+          if (entry.learned) html += '<div class="journal-section"><div class="journal-section-title">📚 ¿Qué aprendí?</div><p style="font-size:14px;">' + escapeHtml(entry.learned) + '</p></div>';
+          if (entry.takeaway) html += '<div class="journal-section"><div class="journal-section-title">🌟 Para llevar conmigo</div><p style="font-size:14px;">' + escapeHtml(entry.takeaway) + '</p></div>';
+          html += '<div style="text-align:right;"><button class="btn btn-danger btn-small" onclick="deleteJournalEntry(\'' + entry.id + '\')">Eliminar</button></div></div>';
+        });
+      }
+      return html;
+    }
+    
+    function renderBibleTab() {
+      var html = '<div class="bible-progress"><h3>📚 Progreso de Lectura de la Biblia</h3>';
+      html += '<p style="font-size:13px;color:#6b7280;margin-bottom:16px;">Total: ' + data.readChapters.length + ' / ' + getTotalChapters() + ' capítulos (' + Math.round((data.readChapters.length / getTotalChapters()) * 100) + '%)</p>';
+      
+      html += '<div class="book-progress-grid">';
+      BIBLE_BOOKS.forEach(function(book) {
+        var pct = getBookProgress(book.abbr);
+        html += '<div class="book-progress-item"><div class="book-progress-name">' + book.name + '</div><div class="book-progress-bar"><div class="book-progress-fill" style="width:' + pct + '%;"></div></div><div style="font-size:9px;color:#6b7280;">' + pct + '%</div></div>';
+      });
+      html += '</div></div>';
+      
+      return html;
+    }
+    
+    function renderHistoryTab() {
+      var html = '<div class="bible-progress"><h3>📊 Historial de Oración</h3>';
+      
+      if (data.prayerHistory.length === 0) {
+        html += '<div class="empty-state">Aún no hay historial.<br>Tus oraciones se registrarán aquí.</div>';
+      } else {
+        // Group by date
+        var byDate = {};
+        data.prayerHistory.forEach(function(p) {
+          if (!byDate[p.date]) byDate[p.date] = [];
+          byDate[p.date].push(p);
+        });
+        
+        var dates = Object.keys(byDate).sort().reverse();
+        dates.slice(0, 30).forEach(function(date) {
+          var dateObj = new Date(date + 'T12:00:00');
+          var prayers = byDate[date];
+          html += '<div class="prayer-history-item"><div class="prayer-history-date">' + formatDateLong(dateObj) + '</div><div class="prayer-history-prayers">';
+          prayers.forEach(function(p) {
+            html += '<div>🕐 ' + p.time + ' — ' + p.prayer + '</div>';
+          });
+          html += '</div></div>';
+        });
+      }
+      html += '</div>';
       return html;
     }
     
@@ -747,13 +959,12 @@
       var goals = data.monthlyGoals[monthKey] || [];
       
       var html = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">' +
-        '<button class="btn btn-secondary btn-small" onclick="changeMonth(-1)">←</button>' +
+        '<button class="btn btn-secondary btn-small" onclick="changeMonth(-1)">← Anterior</button>' +
         '<h2 style="font-size:18px;color:#E85D4C;">' + month.name + ' 2026</h2>' +
-        '<button class="btn btn-secondary btn-small" onclick="changeMonth(1)">→</button></div>' +
-        '<p style="text-align:center;font-style:italic;color:#5A5A5A;margin-bottom:16px;">' + month.theme + '</p>' +
+        '<button class="btn btn-secondary btn-small" onclick="changeMonth(1)">Siguiente →</button></div>' +
         '<div class="scripture-box"><p class="scripture-quote">' + month.scripture + '</p><p class="scripture-ref">' + month.ref + '</p></div>';
       
-      // MONTHLY GOALS BY CATEGORY
+      // Goals
       html += '<div class="month-goals"><h3>✨ Metas de ' + month.name + '</h3>';
       html += '<div class="add-goal-row"><select class="add-goal-select" id="newGoalCategory">' +
         GOAL_CATEGORIES.map(function(c) { return '<option value="' + c.id + '">' + c.title + '</option>'; }).join('') +
@@ -761,24 +972,25 @@
       
       GOAL_CATEGORIES.forEach(function(cat) {
         var catGoals = goals.filter(function(g) { return g.category === cat.id; });
-        html += '<div class="goal-category ' + cat.id + '"><div class="goal-category-title">' + cat.title + '</div>';
         if (catGoals.length > 0) {
-          html += catGoals.map(function(g) {
-            return '<div class="goal-item"><div class="goal-check ' + (g.done ? 'done' : '') + '" onclick="toggleMonthlyGoal(\'' + monthKey + '\', ' + g.id + ')">' + (g.done ? '✓' : '') + '</div><span class="goal-text ' + (g.done ? 'done' : '') + '">' + escapeHtml(g.text) + '</span><button class="btn btn-danger btn-small" onclick="deleteMonthlyGoal(\'' + monthKey + '\', ' + g.id + '); event.stopPropagation();">×</button></div>';
-          }).join('');
-        } else {
-          html += '<p style="font-size:12px;color:#9ca3af;font-style:italic;">Sin metas aún</p>';
+          html += '<div class="goal-category"><div class="goal-category-title">' + cat.title + '</div>';
+          catGoals.forEach(function(g) {
+            html += '<div class="goal-item"><div class="goal-check ' + (g.done ? 'done' : '') + '" onclick="toggleMonthlyGoal(\'' + monthKey + '\', ' + g.id + ')">' + (g.done ? '✓' : '') + '</div><span class="goal-text ' + (g.done ? 'done' : '') + '">' + escapeHtml(g.text) + '</span><button class="btn btn-danger btn-small" onclick="deleteMonthlyGoal(\'' + monthKey + '\', ' + g.id + ')">×</button></div>';
+          });
+          html += '</div>';
         }
-        html += '</div>';
       });
       html += '</div>';
       
-      // FEAST DAYS
-      html += '<div class="feast-days"><h3 style="font-size:14px;color:#E85D4C;margin-bottom:10px;">📅 Fiestas</h3>' +
-        month.feasts.map(function(f) { return '<div class="feast-day"><span class="feast-date">' + f.date + '</span> — ' + f.name + (f.solemnity ? '<span class="feast-solemnity">Solemnidad</span>' : '') + '</div>'; }).join('') + '</div>';
+      // Feasts
+      html += '<div class="month-goals"><h3>🎉 Fiestas de ' + month.name + '</h3>';
+      month.feasts.forEach(function(f) {
+        html += '<div style="padding:6px 0;border-bottom:1px dashed #e0e0e0;font-size:13px;"><strong style="color:#E85D4C;">' + f.date + '</strong> — ' + f.name + '</div>';
+      });
+      html += '</div>';
       
-      // CALENDAR
-      html += '<div style="background:white;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #f0f0f0;">' + renderCalendar(data.currentMonth) + '</div>';
+      // Calendar
+      html += '<div class="month-goals">' + renderCalendar(data.currentMonth) + '</div>';
       
       return html;
     }
@@ -787,20 +999,30 @@
       var year = 2026, firstDay = new Date(year, monthIndex, 1), lastDay = new Date(year, monthIndex + 1, 0);
       var startDay = firstDay.getDay(), daysInMonth = lastDay.getDate();
       var today = new Date(), todayDate = today.getDate(), todayMonth = today.getMonth(), todayYear = today.getFullYear();
-      var feastDays = MONTHS[monthIndex].feasts.map(function(f) { return parseInt(f.date) || 0; });
-      var days = ['D','L','M','X','J','V','S'];
+      var feastDays = MONTHS[monthIndex].feasts.map(function(f) { return f.date; });
+      var days = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
       var html = '<div class="calendar-grid">';
       days.forEach(function(d) { html += '<div class="calendar-header">' + d + '</div>'; });
       for (var i = 0; i < startDay; i++) html += '<div class="calendar-day empty"></div>';
+      
       for (var d = 1; d <= daysInMonth; d++) {
-        var dateStr = year + '-' + String(monthIndex + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
-        var hasEntry = data.lectios.some(function(l) { return l.date === dateStr; });
         var isToday = d === todayDate && monthIndex === todayMonth && year === todayYear;
         var isFeast = feastDays.indexOf(d) !== -1;
-        var cls = 'calendar-day' + (isToday ? ' today' : hasEntry ? ' has-entry' : isFeast ? ' feast' : '');
+        var cls = 'calendar-day' + (isToday ? ' today' : isFeast ? ' feast' : '');
         html += '<div class="' + cls + '">' + d + '</div>';
       }
       return html + '</div>';
+    }
+    
+    function toggleDailyPrayer(id) {
+      var today = getTodayKey();
+      if (!data.dailyPrayers[today]) data.dailyPrayers[today] = {};
+      data.dailyPrayers[today][id] = !data.dailyPrayers[today][id];
+      if (data.dailyPrayers[today][id]) {
+        var names = { rosary: 'Santo Rosario', coronilla: 'Coronilla', liturgia: 'Liturgia de las Horas', examen: 'Examen de Conciencia' };
+        if (names[id]) logPrayer(names[id]);
+      }
+      save(); render();
     }
     
     function changeMonth(delta) { data.currentMonth = (data.currentMonth + delta + 12) % 12; save(); render(); }
@@ -811,43 +1033,82 @@
     
     function openLectioModal() {
       selectedReadingType = 'random';
-      document.querySelectorAll('.reading-option').forEach(function(el, i) { el.classList.toggle('selected', i === 0); });
-      document.getElementById('manualSelect').style.display = 'none';
-      var reading = getRandomUnreadChapter(null);
-      pendingReading = reading;
-      if (reading) {
+      setTimeout(function() {
+        document.querySelectorAll('.reading-option').forEach(function(el, i) { el.classList.toggle('selected', i === 0); });
+        document.getElementById('manualSelect').style.display = 'none';
+        var reading = getRandomUnreadChapter(null);
+        pendingReading = reading;
         document.getElementById('selectedReading').style.display = 'block';
-        document.getElementById('selectedReadingText').textContent = reading.book.name + ' ' + reading.chapter;
-      }
+        document.getElementById('selectedReadingText').textContent = reading ? reading.book.name + ' ' + reading.chapter : '¡Todo leído!';
+      }, 100);
       openModal('lectioModal');
     }
     
-    function updateLectio(id, field, value) { data.lectios = data.lectios.map(function(l) { if (l.id === id) l[field] = value; return l; }); save(); }
-    function deleteLectio(id) { if (confirm('¿Eliminar esta entrada?')) { data.lectios = data.lectios.filter(function(l) { return l.id !== id; }); save(); render(); } }
+    function updateLectio(id, field, value) { 
+      data.lectios = data.lectios.map(function(l) { if (l.id === id) l[field] = value; return l; }); 
+      save(); 
+    }
+    
+    function deleteLectio(id) { 
+      event.stopPropagation();
+      if (confirm('¿Eliminar esta entrada de Lectio Divina?')) { 
+        data.lectios = data.lectios.filter(function(l) { return l.id !== id; }); 
+        save(); 
+        render(); 
+      } 
+    }
     
     function saveIntention() {
       var cat = document.getElementById('intentionCategory').value;
       var text = document.getElementById('intentionText').value.trim();
-      if (!text) { alert('Por favor escribe una intención'); return; }
+      if (!text) return;
       data.intentions.push({ id: Date.now(), category: cat, text: text, answered: false });
       save(); closeModal('intentionModal'); document.getElementById('intentionText').value = ''; render();
     }
     
     function toggleIntention(id) { data.intentions = data.intentions.map(function(i) { if (i.id === id) i.answered = !i.answered; return i; }); save(); render(); }
-    function deleteIntention(id) { data.intentions = data.intentions.filter(function(i) { return i.id !== id; }); save(); render(); }
+    function deleteIntention(id) { event.stopPropagation(); data.intentions = data.intentions.filter(function(i) { return i.id !== id; }); save(); render(); }
+    
+    function saveJournalEntry() {
+      var feeling = document.getElementById('journalFeeling').value.trim();
+      var learned = document.getElementById('journalLearned').value.trim();
+      var takeaway = document.getElementById('journalTakeaway').value.trim();
+      if (!feeling && !learned && !takeaway) { alert('Escribe al menos una reflexión'); return; }
+      
+      data.journal.push({
+        id: Date.now().toString(),
+        date: getTodayKey(),
+        timestamp: new Date().toISOString(),
+        feeling: feeling,
+        learned: learned,
+        takeaway: takeaway
+      });
+      
+      save();
+      closeModal('journalModal');
+      document.getElementById('journalFeeling').value = '';
+      document.getElementById('journalLearned').value = '';
+      document.getElementById('journalTakeaway').value = '';
+      render();
+      showStatus('Entrada de diario guardada', 'success');
+    }
+    
+    function deleteJournalEntry(id) {
+      if (confirm('¿Eliminar esta entrada del diario?')) {
+        data.journal = data.journal.filter(function(j) { return j.id !== id; });
+        save(); render();
+      }
+    }
     
     function addMonthlyGoal() {
       var input = document.getElementById('newGoalInput');
       var catSelect = document.getElementById('newGoalCategory');
       var text = input.value.trim();
-      var category = catSelect.value;
       if (!text) return;
       var monthKey = 'month-' + data.currentMonth;
       if (!data.monthlyGoals[monthKey]) data.monthlyGoals[monthKey] = [];
-      data.monthlyGoals[monthKey].push({ id: Date.now(), text: text, category: category, done: false });
-      input.value = '';
-      save();
-      render();
+      data.monthlyGoals[monthKey].push({ id: Date.now(), text: text, category: catSelect.value, done: false });
+      input.value = ''; save(); render();
     }
     
     function toggleMonthlyGoal(monthKey, id) {
@@ -858,6 +1119,7 @@
     }
     
     function deleteMonthlyGoal(monthKey, id) {
+      event.stopPropagation();
       if (data.monthlyGoals[monthKey]) {
         data.monthlyGoals[monthKey] = data.monthlyGoals[monthKey].filter(function(g) { return g.id !== id; });
         save(); render();
@@ -867,16 +1129,23 @@
     function exportData() {
       var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
       var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
-      a.download = 'planner-espiritual-' + new Date().toISOString().slice(0, 10) + '.json'; a.click();
-      showStatus('Exportado', 'success');
+      a.download = 'planificador-espiritual-' + getTodayKey() + '.json'; a.click();
+      showStatus('Datos exportados', 'success');
     }
     
     function importData(event) {
       var file = event.target.files[0]; if (!file) return;
       var reader = new FileReader();
       reader.onload = function(e) {
-        try { data = JSON.parse(e.target.result); if (!data.readChapters) data.readChapters = []; if (!data.monthlyGoals) data.monthlyGoals = {}; save(); render(); showStatus('Importado', 'success'); }
-        catch (err) { showStatus('Error', 'error'); }
+        try { 
+          data = JSON.parse(e.target.result); 
+          if (!data.readChapters) data.readChapters = []; 
+          if (!data.monthlyGoals) data.monthlyGoals = {};
+          if (!data.dailyPrayers) data.dailyPrayers = {};
+          if (!data.journal) data.journal = [];
+          if (!data.prayerHistory) data.prayerHistory = [];
+          save(); render(); showStatus('Datos importados', 'success'); 
+        } catch (err) { showStatus('Error al importar', 'error'); }
       };
       reader.readAsText(file);
     }
